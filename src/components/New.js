@@ -153,15 +153,10 @@ export default function New(props) {
                         <button className="violet-btn-2">Save & Send</button>
                     </div>    
                 </div>
-
                 
             </div>
-
-            <div className="right-side">
-            </div>
-        </div
-        >
         
+        </div>
     );
 }
 
