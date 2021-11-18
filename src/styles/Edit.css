@@ -1,0 +1,28 @@
+
+
+
+.edit {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .buttons-down-2 {
+    background-color: white;
+    width: 50%;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 32px;
+    padding-left: 155px;
+    padding-right: 55px;
+    position: fixed;
+    left: 0; 
+    bottom: 0;
+  }
+  

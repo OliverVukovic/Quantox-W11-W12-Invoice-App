@@ -12,6 +12,7 @@ export default function Aside(props) {
 
                     <div className="dark-light-mode">
                         <img className="moon" src={require('../assets/icon-moon.svg').default} alt="moon"/>
+                        <img className="sun" src={require('../assets/icon-sun.svg').default} alt="sun"/>
                     </div>
                     
                     <div className="avatar-photo">
