@@ -10,9 +10,28 @@
   width: 100%;
   height: 100%;
   font-family: 'Spartan', sans-serif;
-  background-color: #f2f2f2;
-  /* margin-left: 100px; */
-  outline: none;
+  background-color: var(--colorbody);
+}
+
+.light-version {
+  --colorbody: #f2f2f2;
+  --headlinetext: #0c0e16;
+  --paragraphtext: #858BB2;
+  --nocolorbtn: #f2f2f2;
+  --violetcolorbtn: #7c5dfa;
+  --whitetext: #ffffff;
+  --boxshadow: 0px 10px 10px -10px #48549F1A;
+  --invoicetext: #7e88c3;
+  --statusgreen: #33D69F;
+  --statusorange: #ff8f00;
+  --redcolorbtn: #EC5757;
+  --paymentbackground: #F9FAFE;
+  --darkpart: #373B53;
+  --modalcolor: rgba(0, 0, 0, 0.5);
+}
+
+.dark-version {
+  --colorbody: #000000;
 }
 
 

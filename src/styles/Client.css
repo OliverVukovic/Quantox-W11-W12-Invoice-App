@@ -1,4 +1,18 @@
-
+.light-version {
+  --colorbody: #f2f2f2;
+  --headlinetext: #0c0e16;
+  --paragraphtext: #858BB2;
+  --nocolorbtn: #f2f2f2;
+  --violetcolorbtn: #7c5dfa;
+  --whitetext: #ffffff;
+  --boxshadow: #48549F1A;
+  --invoicetext: #7e88c3;
+  --statusgreen: #33D69F;
+  --statusorange: #ff8f00;
+  --redcolorbtn: #EC5757;
+  --paymentbackground: #F9FAFE;
+  --darkpart: #373B53;
+}
 
 
 .invoice-page {
@@ -23,7 +37,7 @@
     justify-content: space-between;
     gap: 28px;
     border: none;
-    background-color: #f2f2f2;
+    background-color: var(--colorbody);
     margin-bottom: 30px;
     font-weight: 700;
   }
@@ -32,10 +46,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: var(--whitetext);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    box-shadow: 0px 10px 10px -10px var(--boxshadow);
+    /* rgba(72, 84, 159, 0.100397 */
   }
   
   .up-bar-left {
@@ -43,14 +58,14 @@
   }
   
   .invoice-status-2 {
-    background-color: white;
+    background-color: var(--whitetext);
     width: 105px;
     height: 40px;
     font-size: 12px;
     line-height: 15px;
     font-weight: 700;
     letter-spacing: 0.25px;
-    color: #ff8f00;
+    color: var(--statusorange);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,11 +82,11 @@
   }
   
   .no-color-btn-4 {
-    background-color: #f2f2f2;
+    background-color: var(--colorbody);
     height: 48px;
     border-radius: 20px;
     border: none;
-    color: #7e88c3;
+    color: var(--invoicetext);
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
@@ -85,8 +100,8 @@
   }
   
   .delete-btn {
-    background-color: #EC5757;
-    color: white;
+    background-color: var(--redcolorbtn);
+    color: var(--whitetext);
     border-radius: 20px;
     border: none;
     display: flex;
@@ -98,12 +113,12 @@
   }
   
   .violet-btn-3 {
-    background-color: #7c5dfa;
+    background-color: var(--violetcolorbtn);
     width: 130px;
     height: 48px;
     border-radius: 20px;
     border: none;
-    color: white;
+    color: var(--whitetext);
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
@@ -121,7 +136,7 @@
   .client-section {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--whitetext);
     border-radius: 8px;
     padding: 48px;
   }
@@ -154,7 +169,7 @@
   .payment-data {
     display: flex;
     flex-direction: column;
-    background-color: #F9FAFE;
+    background-color: var(--paymentbackground);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     padding: 32px;
@@ -170,12 +185,12 @@
   padding-right: 32px;
   justify-content: space-between;
   align-items: center;
-  background-color: #373B53;
+  background-color: var(--darkpart);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   }
   
   .color-white {
-    color: white;
+    color: var(--whitetext);
   }
   

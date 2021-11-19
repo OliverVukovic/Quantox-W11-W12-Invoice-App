@@ -1,12 +1,14 @@
 import React from "react";
+// import Data from './data.json';
 
 
 export default function Main(props) {
 
     const { showInvoice, invoice } = props; 
 
+
     return (
-    <main>
+    <main className="light-version">
 
         <header>
 

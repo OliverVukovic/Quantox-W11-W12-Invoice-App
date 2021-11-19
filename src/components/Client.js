@@ -3,7 +3,7 @@ import React from "react";
 export default function Client(props) {
     return (
 
-        <div className="invoice-page">
+        <div className="invoice-page light-version">
     
             <div className="client-header">
                 <div className="back-btn">

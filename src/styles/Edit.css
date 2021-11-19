@@ -7,12 +7,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--modalcolor);
     display: none;
   }
   
   .buttons-down-2 {
-    background-color: white;
+    background-color: var(--whitetext);
     width: 50%;
     border-bottom-right-radius: 20px;
     display: flex;

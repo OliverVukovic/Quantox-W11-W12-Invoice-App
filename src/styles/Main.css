@@ -1,5 +1,14 @@
-
-
+.light-version {
+  --colorbody: #f2f2f2;
+  --headlinetext: #0c0e16;
+  --paragraphtext: #858BB2;
+  --nocolorbtn: #f2f2f2;
+  --violetcolorbtn: #7c5dfa;
+  --whitetext: #ffffff;
+  --boxshadow: 0px 10px 10px -10px #48549F1A;
+  --invoicetext: #7e88c3;
+  --statusgreen: #33D69F;
+}
 
 
 main {
@@ -11,7 +20,7 @@ main {
     margin: auto;
     margin-top: inherit;
     padding-top: 70px;
-    /* display: none; */
+    display: none;
   }
   
   header {
@@ -28,7 +37,7 @@ main {
   }
   
   .invoices {
-    color: #0c0e16;
+    color: var(--headlinetext);
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
@@ -39,7 +48,7 @@ main {
   p {
     font-size: 12px;
     font-weight: 500;
-    color: #858BB2;
+    color: var(--paragraphtext);
   }
   
   
@@ -51,12 +60,12 @@ main {
   }
   
   .no-color-btn {
-    background-color: #f2f2f2;
+    background-color: var(--colorbody);
     width: 150px;
     height: 48px;
     border-radius: 20px;
     border: none;
-    color: #0c0e16;
+    color: var(--headlinetext);
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
@@ -69,12 +78,12 @@ main {
   }
   
   .violet-btn {
-    background-color: #7c5dfa;
+    background-color: var(--violetcolorbtn);
     width: 150px;
     height: 48px;
     border-radius: 20px;
     border: none;
-    color: white;
+    color: var(--whitetext);
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
@@ -88,10 +97,10 @@ main {
   }
   
   .btn-plus {
-    border: 1px solid white;
+    border: 1px solid var(--whitetext);
     padding: 10px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--whitetext);
   }
   
   
@@ -101,30 +110,30 @@ main {
   
   .item {
     width: 730px;
-    background-color: white;
+    background-color: var(--whitetext);
     display: flex;
     border-radius: 8px;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0px 10px 10px -10px #48549F1A;
+    box-shadow: var(--boxshadow);
     padding: 16px 32px;
     margin-bottom: 16px;
     cursor: pointer;
   }
   
   .invoice-number {
-    color: #0c0e16;
+    color: var(--headlinetext);
     font-size: 12px;
     line-height: 15px;
     font-weight: 700;
     letter-spacing: 0.25px;
   }
   span {
-    color: #858BB2;
+    color: var(--paragraphtext);
   }
   
   .invoice-date {
-    color: #7e88c3;
+    color: var(--invoicetext);
     font-size: 12px;
     line-height: 15px;
     font-weight: 500;
@@ -132,7 +141,7 @@ main {
   }
   
   .invoice-name {
-    color: #7e88c3;
+    color: var(--invoicetext);
     font-size: 12px;
     line-height: 15px;
     font-weight: 500;
@@ -144,10 +153,10 @@ main {
     line-height: 24px;
     letter-spacing: -0.8px;
     font-weight: 700;
-    color: #0c0e16;
+    color: var(--headlinetext);
   }
   .pound {
-    color: #0c0e16;
+    color: var(--headlinetext);
   }
   
   .invoice-status {
@@ -157,8 +166,8 @@ main {
     line-height: 15px;
     font-weight: 700;
     letter-spacing: 0.25px;
-    background-color: #f2f2f2;
-    color: #33D69F;
+    background-color: var(--colorbody);
+    color: var(--statusgreen);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,10 +179,10 @@ main {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #33D69F;
+    background-color: var(--statusgreen);
   }
   .letter {
-    color: #33D69F;
+    color: var(--statusgreen);
     font-size: 12px;
     line-height: 15px;
     font-weight: 700;

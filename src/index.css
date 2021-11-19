@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Spartan', sans-serif;
   background-color: #f2f2f2;
   outline: none;
 }
@@ -12,4 +13,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.light-version {
+  --colorbody: #f2f2f2;
+  --headlinetext: #0c0e16;
+  --paragraphtext: #858BB2;
+  --nocolorbtn: #f2f2f2;
+  --violetcolorbtn: #7c5dfa;
+  --whitetext: #ffffff;
+  --boxshadow: #48549F1A;
+  --invoicetext: #7e88c3;
+  --statusgreen: #33D69F;
+  --statusorange: #ff8f00;
+  --redcolorbtn: #EC5757;
+  --paymentbackground: #F9FAFE;
+  --darkpart: #373B53;
+}
+
+.dark-version {
+  --colorbody: #000000;
+  
 }
