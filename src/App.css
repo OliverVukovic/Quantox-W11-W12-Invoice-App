@@ -20,7 +20,7 @@
   --nocolorbtn: #f2f2f2;
   --violetcolorbtn: #7c5dfa;
   --whitetext: #ffffff;
-  --boxshadow: 0px 10px 10px -10px #48549F1A;
+  --boxshadow: #48549F1A;
   --invoicetext: #7e88c3;
   --statusgreen: #33D69F;
   --statusorange: #ff8f00;
@@ -28,6 +28,7 @@
   --paymentbackground: #F9FAFE;
   --darkpart: #373B53;
   --modalcolor: rgba(0, 0, 0, 0.5);
+
 }
 
 .dark-version {

@@ -5,7 +5,7 @@
   --nocolorbtn: #f2f2f2;
   --violetcolorbtn: #7c5dfa;
   --whitetext: #ffffff;
-  --boxshadow: 0px 10px 10px -10px #48549F1A;
+  --boxshadow: #48549F1A;
   --invoicetext: #7e88c3;
   --statusgreen: #33D69F;
 }
@@ -20,7 +20,7 @@ main {
     margin: auto;
     margin-top: inherit;
     padding-top: 70px;
-    display: none;
+    /* display: none; */
   }
   
   header {
@@ -106,6 +106,8 @@ main {
   
   section {
     margin-top: 65px;
+    display: flex;
+    justify-content: center;
   }
   
   .item {
@@ -115,7 +117,7 @@ main {
     border-radius: 8px;
     align-items: center;
     justify-content: space-around;
-    box-shadow: var(--boxshadow);
+    box-shadow: 0px 10px 10px -10px  var(--boxshadow);
     padding: 16px 32px;
     margin-bottom: 16px;
     cursor: pointer;

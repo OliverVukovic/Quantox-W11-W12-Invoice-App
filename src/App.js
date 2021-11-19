@@ -12,6 +12,7 @@ import Client from './components/Client';
 import New from './components/New';
 import Edit from './components/Edit';
 import Delete from './components/Delete';
+import EmptyPage from './components/EmptyPage';
 import { useState } from 'react';
 
 
