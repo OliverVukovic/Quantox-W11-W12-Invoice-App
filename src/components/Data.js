@@ -13,7 +13,7 @@ const DataList = () => {
                         <div className="invoice-number"><span>#</span>{invoice.id}</div>
                         <div className="invoice-date">{invoice.createdAt}</div>
                         <div className="invoice-name">{invoice.clientName}</div>
-                        <div className="invoice-price"><span className="pound">£ </span>{ invoice.total}</div>
+                        <div className="invoice-price"><span className="pound">£ </span>{invoice.total}</div>
                         <div className="invoice-status">
                             <div className="circle"></div>
                             <p className="letter">{invoice.status}</p>
