@@ -77,38 +77,42 @@ import Data from "../data.json";
                     </div>
                 </div>
 
-                <div className="payment-data">
+                {invoice.items.map((item) => (
+                <div key={invoice.id} className="payment-data"> 
+
+                {/* <div className="payment-data"> */}
                     <div className="item-list-names">
                         
                         <div className="item-name">
                             <p>Item Name</p>
                             <div className="no-border">
-                            <p className="bold-text">{invoice.items.name}</p>
+                            <p className="bold-text">{item.name}</p>
                             </div>
                         </div>
 
                         <div className="quantity">
                             <p>QTY.</p>
                             <div className="no-border">
-                                <p className="bold">{invoice.items.quantity}</p>
+                                <p className="bold">{item.quantity}</p>
                             </div>
                         </div>
 
                         <div className="price">
                             <p>Price</p>
                             <div className="no-border">
-                                <p className="bold">£ {invoice.items.price}</p>
+                                <p className="bold">£ {item.price.toFixed(2)}</p>
                             </div>
                         </div>
 
                         <div className="total">
                             <p>Total</p>
                             <div className="no-border">
-                                <p className="bold-text">£ {invoice.items.total}</p>
+                                <p className="bold-text">£ {item.total.toFixed(2)}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                ))}
 
                 <div className="dark-part">
                     <p>Amount Due</p>

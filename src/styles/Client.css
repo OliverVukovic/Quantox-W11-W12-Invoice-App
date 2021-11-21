@@ -106,6 +106,9 @@
     text-align: center;
     padding: 16px 23px;
   }
+  .no-color-btn-4:hover {
+    background-color: #DFE3FA;
+  }
   
   .delete-btn {
     background-color: var(--redcolorbtn);
@@ -118,6 +121,9 @@
     width: 89px;
     height: 48px;
     cursor: pointer;
+  }
+  .delete-btn:hover {
+    background-color: #FF9797;
   }
   
   .violet-btn-3 {
@@ -137,6 +143,9 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
+  }
+  .violet-btn-3:hover {
+    background-color: #9277FF;
   }
   
   /* -- section -- */
