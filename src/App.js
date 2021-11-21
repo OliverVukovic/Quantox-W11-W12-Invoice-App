@@ -19,7 +19,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [showInvoice, setShowInvoice] = useState(false);
+  const [showNewInvoice, setShowNewInvoice] = useState(false);
 
   return ( 
     <div className="App">

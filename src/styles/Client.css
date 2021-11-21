@@ -14,6 +14,14 @@
   --darkpart: #373B53;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 65px;
+  gap: 24px;
+  /* display: none; */
+}
 
 .invoice-page {
     display: flex;
@@ -21,7 +29,7 @@
     margin: auto;
     padding-top: 65px;
     gap: 24px;
-    display: none;
+    /* display: none; */
   }
   
   /* -- header -- */

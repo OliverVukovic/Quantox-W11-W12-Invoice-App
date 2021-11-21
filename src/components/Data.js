@@ -1,8 +1,6 @@
 import React from "react";
 import Data from "../data.json";
 
-// const {invoice} = data;
-// const invoiceList = () => {
 
 const DataList = () => {
 

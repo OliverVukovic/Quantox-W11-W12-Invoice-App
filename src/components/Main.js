@@ -1,11 +1,13 @@
 import React from "react";
 // import Data from './data.json';
 import Data from "./Data";
+import { useState } from 'react';
 
 
 export default function Main(props) {
 
-    const { showInvoice, invoice } = props; 
+    // const { invoice } = props; 
+    const [showNewInvoice, setShowNewInvoice] = useState(false);
 
 
     return (
@@ -22,7 +24,7 @@ export default function Main(props) {
 
             <div className="headline-right">
                 <button className="no-color-btn">Filter by status <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/></button>
-                <button className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button>
+                <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button>
             </div>
             
         </header>

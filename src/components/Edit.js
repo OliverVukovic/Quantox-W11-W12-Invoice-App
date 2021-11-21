@@ -4,7 +4,7 @@ import React from "react";
 export default function Edit(props) {
 
     return (
-        <div className="edit">
+        <div className="edit light-version">
 
         <div className="left-side">
             <div className="headline-left">
