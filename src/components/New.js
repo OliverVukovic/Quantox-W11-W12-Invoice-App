@@ -5,7 +5,7 @@ export default function New(props) {
 
 
     return (
-        <div className="new">
+        <div className="new light-version">
 
             <div className="left-side">
                 <div className="headline-left">

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import './styles/Aside.css';
 import './styles/Main.css';
@@ -24,12 +24,12 @@ function App() {
 
   return ( 
     <div className="App">
-      <Aside></Aside>
-      <Main></Main>
-      <New></New>
-      <Client></Client>
-      <Edit></Edit>
-      <Delete></Delete>
+      <Aside />
+      <Main />
+      <New />
+      <Client />
+      <Edit />
+      <Delete />
     </div>
   );
 }

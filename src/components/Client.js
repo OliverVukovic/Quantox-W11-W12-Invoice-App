@@ -6,7 +6,7 @@ import Data from "../data.json";
     const DataList = () => {
     return (
 
-        // <div className="invoice-page light-version">
+        <div className="main light-version">
         <div className="column light-version">
             {Data.invoices.map((invoice) => (
             <div key={invoice.id} className="invoice-page"> 
@@ -123,6 +123,7 @@ import Data from "../data.json";
        
         </div>
                 ))}
+        </div>
         </div>
         );
     }

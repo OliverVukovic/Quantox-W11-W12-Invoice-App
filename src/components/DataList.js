@@ -1,13 +1,18 @@
 import React from "react";
 import Data from "../data.json";
+import Client from "./Client";
 
 
-const DataList = () => {
+const DataList = ({invoice}) => {
+
+    function openInvoice() {
+        <Client />
+    }
 
         return (
             <div className="invoices">
                 {Data.invoices.map((invoice) => (
-                    <div key={invoice.id} className="item"> 
+                    <div key={invoice.id} className="item" onClick={openInvoice}> 
                         <div className="invoice-number"><span>#</span>{invoice.id}</div>
                         <div className="invoice-date">{invoice.createdAt}</div>
                         <div className="invoice-name">{invoice.clientName}</div>

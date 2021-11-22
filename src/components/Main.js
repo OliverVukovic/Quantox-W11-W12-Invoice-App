@@ -1,6 +1,6 @@
 import React from "react";
 // import Data from './data.json';
-import Data from "./Data";
+import DataList from "./DataList";
 import Header from "./Header";
 import { useState } from 'react';
 
@@ -18,7 +18,7 @@ export default function Main(props) {
 
 
         <section>
-            <Data />
+            <DataList />
                 
                 {/* {showInvoice ? */}
                     {/* <div key={invoice.id} className="item"> 

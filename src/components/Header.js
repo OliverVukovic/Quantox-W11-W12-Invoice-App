@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react';
+import Filter from "./Filter";
 
 
 export default function Header(props) {
@@ -27,6 +28,8 @@ export default function Header(props) {
                     <button className="no-color-btn">Filter by status 
                         <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                     </button>
+
+                    {/* <Filter /> */}
                     
                     <div className="filter">
                         <label className="container">
