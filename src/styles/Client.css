@@ -19,8 +19,8 @@
   flex-direction: column;
   margin: auto;
   padding-top: 65px;
-  gap: 24px;
-  /* display: none; */
+  gap: 65px;
+  display: none;
 }
 
 .invoice-page {
@@ -29,7 +29,6 @@
     margin: auto;
     padding-top: 65px;
     gap: 24px;
-    /* display: none; */
   }
   
   /* -- header -- */

@@ -20,7 +20,7 @@ main {
     margin: auto;
     margin-top: inherit;
     padding-top: 70px;
-    display: none;
+    /* display: none; */
   }
   
   header {

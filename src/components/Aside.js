@@ -1,4 +1,5 @@
 import React from "react";
+import Theme from "./Theme";
 
 export default function Aside(props) {
     return <aside className="aside-col">
@@ -11,8 +12,7 @@ export default function Aside(props) {
                 <div className="down-part">
 
                     <div className="dark-light-mode">
-                        <img className="moon" src={require('../assets/icon-moon.svg').default} alt="moon"/>
-                        <img className="sun" src={require('../assets/icon-sun.svg').default} alt="sun"/>
+                    <Theme />
                     </div>
                     
                     <div className="avatar-photo">

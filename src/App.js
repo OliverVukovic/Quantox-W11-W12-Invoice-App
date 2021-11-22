@@ -6,6 +6,7 @@ import './styles/New.css';
 import './styles/Edit.css';
 import './styles/Client.css';
 import './styles/Delete.css';
+import './styles/Header.css';
 import Main from './components/Main';
 import Aside from './components/Aside';
 import Client from './components/Client';

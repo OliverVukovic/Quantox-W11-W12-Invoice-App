@@ -1,6 +1,7 @@
 import React from "react";
 // import Data from './data.json';
 import Data from "./Data";
+import Header from "./Header";
 import { useState } from 'react';
 
 
@@ -13,21 +14,7 @@ export default function Main(props) {
     return (
     <main className="light-version">
 
-        <header>
-
-            <div className="headline">
-                <div className="headline-left">
-                    <h1 className="invoices">Invoices</h1>
-                    <p>No invoices</p>
-                </div>
-            </div>
-
-            <div className="headline-right">
-                <button className="no-color-btn">Filter by status <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/></button>
-                <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button>
-            </div>
-            
-        </header>
+        <Header />
 
 
         <section>
