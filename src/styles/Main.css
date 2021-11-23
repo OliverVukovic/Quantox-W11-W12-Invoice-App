@@ -111,6 +111,7 @@ main {
     margin-top: 65px;
     display: flex;
     justify-content: center;
+    padding-left: 100px;
   }
   
   .item {
@@ -209,4 +210,15 @@ main {
   .bold {
     font-weight: 700;
   }
-  
+  @media only screen and (max-width: 940px) {
+    section{
+      padding-left: 0;
+    }
+    .item {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .invoices {
+      width: 100%;
+    }
+  }
