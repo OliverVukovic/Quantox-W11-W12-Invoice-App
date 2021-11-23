@@ -1,18 +1,22 @@
 import React from "react";
 import Data from "../data.json";
-import Client from "./Client";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const DataList = ({invoice}) => {
+const navigate = useNavigate();
 
-    function openInvoice() {
-        <Client />
+    function openInvoice(invoice) {
+        navigate(`/client`,{invoiceSend: invoice})
     }
 
         return (
             <div className="invoices">
                 {Data.invoices.map((invoice) => (
-                    <div key={invoice.id} className="item" onClick={openInvoice}> 
+                    <div key={invoice.id} className="item" onClick={()=>{
+                        openInvoice(invoice)
+                        }}> 
                         <div className="invoice-number"><span>#</span>{invoice.id}</div>
                         <div className="invoice-date">{invoice.createdAt}</div>
                         <div className="invoice-name">{invoice.clientName}</div>

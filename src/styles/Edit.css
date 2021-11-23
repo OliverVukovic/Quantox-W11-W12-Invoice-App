@@ -22,7 +22,7 @@
     top: 0;
     left: 0;
     background-color: var(--modalcolor);
-    display: none;
+    /* display: none; */
   }
   
   .buttons-down-2 {

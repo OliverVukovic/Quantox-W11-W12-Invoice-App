@@ -1,19 +1,58 @@
 import React from "react";
 import Data from "../data.json";
+import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
+    
+    
+    
 
     const DataList = () => {
+
+        let {invoiceSend} = useParams();
+        console.log(invoiceSend);
+
+        // const foundInvoice = Data.invoices.find(invoice => invoice.id === id)
+        // const findInvoice = {findInvoice.filter((invoice) => invoice.id === id)}
+
+        const navigate = useNavigate();
+        
+        function goBack(invoice) {
+            navigate(`/`)
+        }
+
+        function deletePage(invoice) {
+            navigate(`/delete`)
+        }
+
+        function editPage(invoice) {
+            navigate(`/edit`)
+        }
+
+        function newPage(invoice) {
+            navigate(`/new`)
+        }
+
+        
+
     return (
 
         <div className="main light-version">
         <div className="column light-version">
+            
+            
+            {/* ovo ispod brisi */}
             {Data.invoices.map((invoice) => (
             <div key={invoice.id} className="invoice-page"> 
     
             <div className="client-header">
                 <div className="back-btn">
-                    <button className="go-back"><img className="arrow-left" src={require('../assets/icon-arrow-left.svg').default} alt="arrow-left"/>Go back</button>
+                    <button className="go-back" onClick={()=>{
+                        goBack(invoice)
+                        }}>
+                        <img className="arrow-left" src={require('../assets/icon-arrow-left.svg').default} alt="arrow-left"/>Go back
+                    </button>
                 </div>
 
                 <div className="btn-up-bar">    
@@ -27,8 +66,12 @@ import Data from "../data.json";
                     </div>
 
                     <div className="up-bar-right">
-                        <button className="no-color-btn-4">Edit</button>
-                        <button className="delete-btn">Delete</button>
+                        <button className="no-color-btn-4" onClick={()=>{
+                        editPage(invoice)
+                        }}>Edit</button>
+                        <button className="delete-btn" onClick={()=>{
+                        deletePage(invoice)
+                        }}>Delete</button>
                         <button className="violet-btn-3">Mark as Paid</button>
                     </div>
                 </div>
@@ -77,8 +120,8 @@ import Data from "../data.json";
                     </div>
                 </div>
 
-                {invoice.items.map((item) => (
-                <div key={invoice.id} className="payment-data"> 
+                {invoice.items.map((item, index) => (
+                <div key={index} className="payment-data"> 
 
                 {/* <div className="payment-data"> */}
                     <div className="item-list-names">

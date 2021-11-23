@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import Filter from "./Filter";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Header(props) {
@@ -8,7 +9,13 @@ export default function Header(props) {
     const [showNewInvoice, setShowNewInvoice] = useState(false);
 
     const handleClick = () => {
-        console.log('Zdravo, Olivere! Ovo radi...')
+        console.log('Ovo radi...')
+    }
+
+    const navigate = useNavigate();
+        
+    function newPage() {
+        navigate(`/new`)
     }
 
     return (
@@ -47,7 +54,9 @@ export default function Header(props) {
                     </div>
 
                 </div>
-                <button onClick={handleClick} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button>
+                <button onClick={()=>{newPage()}} className="violet-btn">
+                    <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice
+                </button>
                 {/* <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button> */}
             </div>
             
