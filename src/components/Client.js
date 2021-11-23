@@ -4,10 +4,6 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 
-    
-    
-    
-
     const DataList = () => {
 
         let {invoiceSend} = useParams();
@@ -30,9 +26,7 @@ import { useNavigate } from 'react-router-dom';
             navigate(`/edit`)
         }
 
-        function newPage(invoice) {
-            navigate(`/new`)
-        }
+        
 
         
 

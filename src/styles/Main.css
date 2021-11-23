@@ -37,12 +37,15 @@ main {
   }
   
   .invoices {
+    display: flex;
+    flex-direction: column;
     color: var(--headlinetext);
     font-weight: 700;
     font-size: 32px;
     line-height: 36px;
     letter-spacing: -1px;
     margin: 0px;
+    gap: 16px;
   }
   
   p {
@@ -119,7 +122,6 @@ main {
     justify-content: space-around;
     box-shadow: 0px 10px 10px -10px  var(--boxshadow);
     padding: 16px 32px;
-    margin-bottom: 16px;
     cursor: pointer;
   }
   
