@@ -2,13 +2,18 @@ import React from "react";
 import Data from "../data.json";
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import convertDate from "./DayMonthYear";
 
 
     const DataList = () => {
-        let {invoiceSend} = useParams();
-        console.log(invoiceSend);
-        // const foundInvoice = Data.invoices.find(invoice => invoice.id === id)
-        // const findInvoice = {findInvoice.filter((invoice) => invoice.id === id)}
+        // let {invoiceSend} = useParams();
+        let location = useLocation();
+        console.log(location.state);
+        const invoice = location.state;
+
+        // const findInvoice = Data.invoices.filter(invoice => invoice.id === invoiceSend.id)
+        
         const navigate = useNavigate();
         function goBack(invoice) {
             navigate(`/`)
@@ -17,14 +22,15 @@ import { useNavigate } from 'react-router-dom';
             navigate(`/delete`)
         }
         function editPage(invoice) {
-            navigate(`/edit`)
+            navigate(`/edit`, {state: invoice})
+            
         }
     return (
 
         <div className="main light-version">
         <div className="column light-version">
-            {/* ovo ispod brisi */}
-            {Data.invoices.map((invoice) => (
+
+            {/* {Data.invoices.map((invoice) => ( */}
             <div key={invoice.id} className="invoice-page"> 
             <div className="client-header">
                 <div className="back-btn">
@@ -72,11 +78,11 @@ import { useNavigate } from 'react-router-dom';
                     <div className="date-payment-due">
                         <div>
                             <p>Invoice Data</p>
-                            <h4>{invoice.createdAt}</h4>
+                            <h4>{convertDate(invoice.createdAt)}</h4>
                         </div>
                         <div>
                             <p>Payment Due</p>
-                            <h4>{invoice.paymentDue}</h4>
+                            <h4>{convertDate(invoice.paymentDue)}</h4>
                         </div>
                     </div>
                     <div className="bill-to">
@@ -132,7 +138,7 @@ import { useNavigate } from 'react-router-dom';
                 </div>
             </div>
         </div>
-                ))}
+                {/* ))} */}
         </div>
         </div>
         );

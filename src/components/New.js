@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 export default function New(props) {
+
+    let invoice = useLocation().state;
+
+    const [terms, setTerms] = useState(false)
+    const [arrow,setArrow] = useState(true)
+
+    function openTerms() {
+        setTerms(true);
+        setArrow(false)
+        if (terms) {
+            setArrow(true)
+            setTerms(false)
+        }
+    }
 
 
     return (
@@ -16,28 +31,28 @@ export default function New(props) {
                     <p className="violet-text">Bill From</p>
                     <p>Street Address</p>
                     <div className="light-border">
-                        <p className="bold-text">19 Union Terrace</p>
+                        <p className="bold-text"><input type="text"/></p>
                     </div>
                     <div className="adress">
 
                         <div className="city">
                             <p>City</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="postcode">
                             <p>Post Code</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="country">
                             <p>Country</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
@@ -46,17 +61,17 @@ export default function New(props) {
                     <p className="violet-text">Bill To</p>
                     <p>Client's Name</p>
                     <div className="light-border">
-                        <p className="bold-text"></p>
+                        <p className="bold-text"><input type="text"/></p>
                     </div>
 
                     <p>Client's Email</p>
                     <div className="light-border">
-                        <p className="bold-text"></p>
+                        <p className="bold-text"><input type="text"/></p>
                     </div>
 
                     <p>Street Adress</p>
                     <div className="light-border">
-                        <p className="bold-text"></p>
+                        <p className="bold-text"><input type="text"/></p>
                     </div>
 
                     <div className="adress">
@@ -64,21 +79,21 @@ export default function New(props) {
                         <div className="city">
                             <p>City</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="postcode">
                             <p>Post Code</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="country">
                             <p>Country</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
                         
@@ -88,23 +103,50 @@ export default function New(props) {
                         <div className="date">
                             <p>Invoice Date</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                                 <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/>
                             </div>
                         </div>
 
                         <div className="date">
-                            <p>Payment Terms</p>
-                            <div className="light-border">
-                                <p className="bold-text"></p>
-                                <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
-                            </div>
+                        <p>Payment Terms</p>
+                        <div onClick={openTerms} className="light-border">
+                            <p className="bold-text"></p>
+                            {arrow ?
+                            <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
+                            : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
+                            }
+
                         </div>
+                        { 
+                                terms ?
+                                
+                            <div className="filter-2">
+                        
+                                <label className="container-1">
+                                <p className="bold-text">Net 1 Day</p>
+                                </label>
+                                <label className="container-1">
+                                <p className="bold-text">Net 7 Days</p>
+                                </label>
+                                <label className="container-1">
+                                <p className="bold-text">Net 14 Days</p>
+                                </label>
+                                <label className="container-1">
+                                <p className="bold-text">Net 30 Days</p>
+                                </label>
+                            
+                            </div>
+
+                                :null
+
+                            }
                     </div>
+                </div>
 
                     <p>Project Description</p>
                     <div className="light-border">
-                        <p className="bold-text">e.g. Graphic Design Service</p>
+                        <p className="bold-text"><input type="text"/></p>
                     </div>
 
                     <h3 className="gray">Item List</h3>
@@ -114,28 +156,28 @@ export default function New(props) {
                         <div className="item-name">
                             <p>Item Name</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="quantity">
                             <p>Qty.</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="price">
                             <p>Price</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
+                                <p className="bold-text"><input type="text"/></p>
                             </div>
                         </div>
 
                         <div className="total">
                             <p>Total</p>
                             <div className="no-border">
-                                <p className="bold">155</p>
+                                <p className="bold"><input type="text"/></p>
                             </div>
                         </div>
 
@@ -161,17 +203,4 @@ export default function New(props) {
     );
 }
 
-              
-
-
-
-
-
-
-
-// Payment Terms
-// Net 1 day
-// Net 7 days
-// Net 14 days
-// Net 30 days
 

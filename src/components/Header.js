@@ -2,21 +2,21 @@ import React from "react";
 import { useState } from 'react';
 import Filter from "./Filter";
 import { useNavigate } from 'react-router-dom';
+import New from "./New";
 
 
 export default function Header(props) {
 
-    const [showNewInvoice, setShowNewInvoice] = useState(false);
+    const [ShowNewInvoice, setShowNewInvoice] = useState(false);
 
-    const handleClick = () => {
-        console.log('Ovo radi...')
-    }
 
     const navigate = useNavigate();
         
     function newPage() {
         navigate(`/new`)
+        // setShowNewInvoice(true)
     }
+
     const [show,setShow] = useState(false)
     const [arrow,setArrow] = useState(true)
 
@@ -71,15 +71,21 @@ export default function Header(props) {
                             </label>
                             
                         </div>
+
                         :null
                     }
 
                 </div>
-                <button onClick={()=>{newPage()}} className="violet-btn">
+                <button onClick={()=>setShowNewInvoice(true)} className="violet-btn">
                     <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice
                 </button>
                 {/* <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button> */}
             </div>
+
+            {
+               ShowNewInvoice?
+                <New />:null
+            }
             
         </header>
         );

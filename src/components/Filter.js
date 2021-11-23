@@ -10,19 +10,21 @@ const Filter = ({changedFilter}) => {
 
     return (
         <div className="filter">
+                        
         <label className="container">
-            <input onClick={checkboxChanged} type="checkbox"></input>
+            <input type="checkbox"></input>
             <span className="checkmark"></span> Draft
         </label>
         <label className="container">
-            <input onClick={checkboxChanged} type="checkbox"></input>
+            <input type="checkbox"></input>
             <span className="checkmark"></span> Pending
         </label>
         <label className="container">
-            <input onClick={checkboxChanged} type="checkbox"></input>
+            <input type="checkbox"></input>
             <span className="checkmark"></span> Paid
         </label>
-        </div>
+        
+    </div>
     )
 }
 

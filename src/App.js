@@ -35,10 +35,13 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Main />}/> 
           <Route exact path="/client" element={<Client />}/>
-          <Route exact path="/new" element={<New />}/>
+          {/* <Route exact path="/new" element={<New />}/> */}
           <Route exact path="/edit" element={<Edit />}/>
           <Route exact path="/delete" element={<Delete />}/>
         </Routes>
+      {/* <New />
+      <Edit />
+      <Delete /> */}
     </div>
     </Router>
   );

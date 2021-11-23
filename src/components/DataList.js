@@ -1,14 +1,14 @@
 import React from "react";
 import Data from "../data.json";
 import { useNavigate } from 'react-router-dom';
-
+import convertDate from "./DayMonthYear";
 
 
 const DataList = ({invoice}) => {
 const navigate = useNavigate();
 
     function openInvoice(invoice) {
-        navigate(`/client`,{invoiceSend: invoice})
+        navigate(`/client`,{state: invoice})
     }
 
         return (
@@ -18,7 +18,7 @@ const navigate = useNavigate();
                         openInvoice(invoice)
                         }}> 
                         <div className="invoice-number"><span>#</span>{invoice.id}</div>
-                        <div className="invoice-date">{invoice.createdAt}</div>
+                        <div className="invoice-date">{convertDate(invoice.createdAt)}</div>
                         <div className="invoice-name">{invoice.clientName}</div>
                         <div className="invoice-price"><span className="pound">£ </span>{invoice.total.toFixed(2)}</div>
                         <div className="invoice-status">
