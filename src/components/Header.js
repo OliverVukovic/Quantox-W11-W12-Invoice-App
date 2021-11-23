@@ -17,7 +17,18 @@ export default function Header(props) {
     function newPage() {
         navigate(`/new`)
     }
+    const [show,setShow] = useState(false)
+    const [arrow,setArrow] = useState(true)
 
+    function showModal() {
+        setShow(true);
+        setArrow(false)
+        if (show) {
+            setArrow(true)
+            setShow(false)
+        }
+    }
+    
     return (
     
         <header>
@@ -32,26 +43,36 @@ export default function Header(props) {
             <div className="headline-right">
                 <div className="filter-dropdown">
                     
-                    <button className="no-color-btn">Filter by status 
-                        <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
+                    <button onClick={showModal} className="no-color-btn">Filter by status 
+                        {arrow ?
+                        <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/> : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
+                        }
                     </button>
 
                     {/* <Filter /> */}
                     
-                    <div className="filter">
-                        <label className="container">
-                            <input type="checkbox"></input>
-                            <span className="checkmark"></span> Draft
-                        </label>
-                        <label className="container">
-                            <input type="checkbox"></input>
-                            <span className="checkmark"></span> Pending
-                        </label>
-                        <label className="container">
-                            <input type="checkbox"></input>
-                            <span className="checkmark"></span> Paid
-                        </label>
-                    </div>
+
+                    {
+                            show?
+                        
+                        <div className="filter">
+                        
+                            <label className="container">
+                                <input type="checkbox"></input>
+                                <span className="checkmark"></span> Draft
+                            </label>
+                            <label className="container">
+                                <input type="checkbox"></input>
+                                <span className="checkmark"></span> Pending
+                            </label>
+                            <label className="container">
+                                <input type="checkbox"></input>
+                                <span className="checkmark"></span> Paid
+                            </label>
+                            
+                        </div>
+                        :null
+                    }
 
                 </div>
                 <button onClick={()=>{newPage()}} className="violet-btn">

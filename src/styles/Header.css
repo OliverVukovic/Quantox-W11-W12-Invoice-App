@@ -116,7 +116,11 @@
     padding: 24px;
     gap: 16px;
     position: absolute;
-    /* display: none; */
+    /* display: none;  */
+  }
+
+  .up {
+    transform: rotate(180deg);
   }
 
 
@@ -145,7 +149,6 @@
 
 
   .container {
-    display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
