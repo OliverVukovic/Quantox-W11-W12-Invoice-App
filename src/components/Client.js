@@ -1,18 +1,14 @@
-import React from "react";
-import { useState } from 'react';
-import Data from "../data.json";
-import { useParams } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, useLocation } from 'react-router-dom';
 import convertDate from "./DayMonthYear";
 import Edit from "./Edit";
 import Delete from "./Delete";
 
 
     const DataList = () => {
-        // let {invoiceSend} = useParams();
+
         let location = useLocation();
-        console.log(location.state);
+            console.log(location.state);
         const invoice = location.state;
 
         // const findInvoice = Data.invoices.filter(invoice => invoice.id === invoiceSend.id)
@@ -23,12 +19,6 @@ import Delete from "./Delete";
         function goBack(invoice) {
             navigate(`/`)
         }
-        // function deletePage(invoice) {
-        //     navigate(`/delete`)
-        // }
-        // function editPage(invoice) {
-        //     navigate(`/edit`, {state: invoice})
-        // }
 
         function closeEdit() {
             setEditInvoice(false)
@@ -43,7 +33,7 @@ import Delete from "./Delete";
         <div className="main light-version">
         <div className="column light-version">
 
-            {/* {Data.invoices.map((invoice) => ( */}
+                {/* {Data.invoices.map((invoice) => ( */}
             <div key={invoice.id} className="invoice-page"> 
             <div className="client-header">
                 <div className="back-btn">
@@ -61,14 +51,12 @@ import Delete from "./Delete";
 
                     </div>
                     <div className="up-bar-right">
-                        
+
                         <button className="no-color-btn-4" 
-                        // onClick={()=>{editPage(invoice)}}
                         onClick={()=>setEditInvoice(true)}
                         >Edit</button>
 
                         <button className="delete-btn" 
-                        // onClick={()=>{deletePage(invoice)}}
                         onClick={()=>setDeleteInvoice(true)}
                         >Delete</button>
 
@@ -124,44 +112,46 @@ import Delete from "./Delete";
                         <h4>{invoice.clientEmail}</h4>
                     </div>
                 </div>
+                
                 {invoice.items.map((item, index) => (
-                <div key={index} className="payment-data"> 
-                {/* <div className="payment-data"> */}
-                    <div className="item-list-names">
-                        <div className="item-name">
-                            <p>Item Name</p>
-                            <div className="no-border">
-                            <p className="bold-text">{item.name}</p>
+                    <div key={index} className="payment-data"> 
+                        <div className="item-list-names">
+                            <div className="item-name">
+                                <p>Item Name</p>
+                                <div className="no-border">
+                                <p className="bold-text">{item.name}</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="quantity">
-                            <p>QTY.</p>
-                            <div className="no-border">
-                                <p className="bold">{item.quantity}</p>
+                            <div className="quantity">
+                                <p>QTY.</p>
+                                <div className="no-border">
+                                    <p className="bold">{item.quantity}</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="price">
-                            <p>Price</p>
-                            <div className="no-border">
-                                <p className="bold">£ {item.price.toFixed(2)}</p>
+                            <div className="price">
+                                <p>Price</p>
+                                <div className="no-border">
+                                    <p className="bold">£ {item.price.toFixed(2)}</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="total">
-                            <p>Total</p>
-                            <div className="no-border">
-                                <p className="bold-text">£ {item.total.toFixed(2)}</p>
+                            <div className="total">
+                                <p>Total</p>
+                                <div className="no-border">
+                                    <p className="bold-text">£ {item.total.toFixed(2)}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                ))}
+                    ))}
+
                 <div className="dark-part">
                     <p>Amount Due</p>
                     <h2 className="color-white">£ {invoice.total.toFixed(2)}</h2>
                 </div>
+                
             </div>
         </div>
                 {/* ))} */}

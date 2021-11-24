@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import convertDate from "./DayMonthYear";
 
 
 export default function Edit(props) {
@@ -31,14 +32,12 @@ export default function Edit(props) {
                 <p>Street Address</p>
                 <div className="light-border">
                     <input className="bold-text" type="text" placeholder={invoice.senderAddress.street}/>
-                    {/* <p className="bold-text">{invoice.senderAddress.street}</p> */}
                 </div>
                 <div className="adress">
 
                     <div className="city">
                         <p>City</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.senderAddress.city}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.senderAddress.city}/>
                         </div>
                     </div>
@@ -46,7 +45,6 @@ export default function Edit(props) {
                     <div className="postcode">
                         <p>Post Code</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.senderAddress.postCode}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.senderAddress.postCode}/>
                         </div>
                     </div>
@@ -54,7 +52,6 @@ export default function Edit(props) {
                     <div className="country">
                         <p>Country</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.senderAddress.country}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.senderAddress.country}/>
                         </div>
                     </div>
@@ -64,19 +61,16 @@ export default function Edit(props) {
                 <p className="violet-text">Bill To</p>
                 <p>Client's Name</p>
                 <div className="light-border">
-                    {/* <p className="bold-text">{invoice.clientName}</p> */}
                     <input className="bold-text" type="text" placeholder={invoice.clientName}/>
                 </div>
 
                 <p>Client's Email</p>
                 <div className="light-border">
-                    {/* <p className="bold-text">{invoice.clientEmail}</p> */}
                     <input className="bold-text" type="text" placeholder={invoice.clientEmail}/>
                 </div>
 
                 <p>Street Adress</p>
                 <div className="light-border">
-                    {/* <p className="bold-text">{invoice.clientAddress.street}</p> */}
                     <input className="bold-text" type="text" placeholder={invoice.clientAddress.street}/>
                 </div>
 
@@ -85,7 +79,6 @@ export default function Edit(props) {
                     <div className="city">
                         <p>City</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.clientAddress.city}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.clientAddress.city}/>
                         </div>
                     </div>
@@ -93,7 +86,6 @@ export default function Edit(props) {
                     <div className="postcode">
                         <p>Post Code</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.clientAddress.postCode}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.clientAddress.postCode}/>
                         </div>
                     </div>
@@ -101,7 +93,6 @@ export default function Edit(props) {
                     <div className="country">
                         <p>Country</p>
                         <div className="light-border">
-                            {/* <p className="bold-text">{invoice.clientAddress.country}</p> */}
                             <input className="bold-text" type="text" placeholder={invoice.clientAddress.country}/>
                         </div>
                     </div>
@@ -111,16 +102,16 @@ export default function Edit(props) {
                 <div className="invoice-date">
                     <div className="date">
                         <p>Invoice Date</p>
-                        <div className="light-border">
-                            <p className="bold-text"></p>
+                        <div className="light-border calendar">
+                            <input className="bold-text" placeholder={convertDate(invoice.createdAt)}/>
                             <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/>
                         </div>
                     </div>
 
                     <div className="date">
                         <p>Payment Terms</p>
-                        <div onClick={openTerms} className="light-border">
-                            <p className="bold-text"></p>
+                        <div onClick={openTerms} className="light-border pay-terms">
+                            <p className="bold-text">Net {invoice.paymentTerms} Days</p>
                             {arrow ?
                             <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                             : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
@@ -156,46 +147,40 @@ export default function Edit(props) {
                 <p>Project Description</p>
                 <div className="light-border">
                     <input className="bold-text" type="text" placeholder={invoice.description}/>
-                    {/* <p className="bold-text">{invoice.description}</p> */}
                 </div>
 
                 <h3 className="gray">Item List</h3>
 
                 <div className="item-list-names">
                             
-                            <div className="item-name">
-                                <p>Item Name</p>
+                    <div className="item-name">
+                        <p>Item Name</p>
+                    </div>
 
-                            </div>
+                    <div className="quantity">
+                        <p>Qty.</p>
+                    </div>
 
-                            <div className="quantity">
-                                <p>Qty.</p>
-     
-                            </div>
+                    <div className="price">
+                        <p>Price</p>
+                    </div>
 
-                            <div className="price">
-                                <p>Price</p>
+                    <div className="total">
+                        <p>Total</p>
+                    </div>
 
-                            </div>
+                    {/* phantom div */}
+                    <div style={{width:'13px', height:'16px',backgroundColor:'transparent'}}></div>
+                    
+                </div>
 
-                            <div className="total">
-                                <p>Total</p>
-
-                            </div>
-
-                            {/* phantom div */}
-                            <div style={{width:'13px', height:'16px',backgroundColor:'transparent'}}></div>
-
-                        </div>
-
-                {invoice.items.map((item, index)=>{
+                {invoice.items.map((item, index) => {
                     return (
                         <div className="item-list-names">
                             
                             <div className="item-name">
  
                                 <div className="light-border">
-                                    {/* <p className="bold-text">{item.name}</p> */}
                                     <input className="bold-text" type="text" placeholder={item.name}/>
                                 </div>
                             </div>
@@ -203,7 +188,6 @@ export default function Edit(props) {
                             <div className="quantity">
 
                                 <div className="light-border">
-                                    {/* <p className="bold-text">{item.quantity}</p> */}
                                     <input className="bold-text" type="text" placeholder={item.quantity}/>
                                 </div>
                             </div>
@@ -211,7 +195,6 @@ export default function Edit(props) {
                             <div className="price">
 
                                 <div className="light-border">
-                                    {/* <p className="bold-text">{item.price.toFixed(2)}</p> */}
                                     <input className="bold-text" type="text" placeholder={item.price.toFixed(2)}/>
                                 </div>
                             </div>
@@ -219,7 +202,6 @@ export default function Edit(props) {
                             <div className="total">
 
                                 <div className="no-border">
-                                    {/* <p className="bold">{(item.quantity * item.price).toFixed(2)}</p> */}
                                     <input className="bold-text" type="text" placeholder={(item.quantity * item.price).toFixed(2)}/>
                                 </div>
                             </div>

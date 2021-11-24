@@ -16,31 +16,37 @@
     padding-right: 55px;
     padding-bottom: 0px;
     background-color: var(--newmodal);
-    
-    
   }
+
   .bill-form {
     display: flex;
     flex-direction: column;
   }
+
   .violet-text {
     color: #7C5DFA;
     margin-top: 48px;
     font-weight: 700;
   }
+
   .light-border {
     border: 1px solid #dfe3fa;
-    padding-left: 20px;
+    padding-left: 15px;
     height: 48px;
     display: flex;
     align-items: center;
     margin-bottom: 14px;
     cursor: pointer;
   }
+  .light-border:hover {
+    border: 1px solid #7C5DFA;
+  }
+
   .bold-text {
     color: #0c0e16;
     font-weight: 700;
   }
+
   .adress {
     display: flex;
     flex-wrap: wrap;
@@ -107,6 +113,10 @@
   .price {
     width: 100px;
   }
+
+  .total {
+    width: 180px;
+  }
   
   .no-border {
     height: 48px;
@@ -141,7 +151,6 @@
   }
   
   .buttons-down {
-    
     width: 50%;
     border-bottom-right-radius: 20px;
     display: flex;
@@ -225,14 +234,11 @@
     border: none;
     font-family: "Spartan";
     font-weight: 700;
-<<<<<<< Updated upstream
+    color: var(--inputcolor);
+    background-color: var(--inputcolor);
     color: var(--headlinetext);
   }
   input::placeholder {
     color: var(--headlinetext);
-=======
-    color: var(--inputcolor);
     background-color: var(--inputcolor);
-    
->>>>>>> Stashed changes
   }

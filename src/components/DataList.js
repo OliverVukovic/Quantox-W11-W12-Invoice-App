@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import convertDate from "./DayMonthYear";
 
 
-const DataList = ({invoice}) => {
+const DataList = () => {
 const navigate = useNavigate();
 
     function openInvoice(invoice) {
@@ -31,7 +31,6 @@ const navigate = useNavigate();
             </div>
         )
     }
-
 
 export default DataList
 

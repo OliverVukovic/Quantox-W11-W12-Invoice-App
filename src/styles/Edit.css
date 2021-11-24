@@ -72,5 +72,30 @@
 
   .number-of-invoice {
     display: flex;
+    color: var(--headlinetext);
+  }
+
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: "Spartan";
+    font-weight: 700;
+    color: var(--inputcolor);
+    background-color: var(--inputcolor);
+    color: var(--headlinetext);
+  }
+  input::placeholder {
+    color: var(--headlinetext);
+    background-color: var(--inputcolor);
+  }
+
+  .pay-terms {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
   }
   
+  .calendar {
+    padding-right: 10px;
+  }

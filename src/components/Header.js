@@ -1,35 +1,22 @@
-import React from "react";
-import { useState} from 'react';
-import Filter from "./Filter";
-import { useNavigate } from 'react-router-dom';
+import React, { useState} from "react";
 import New from "./New";
 
 
 export default function Header(props) {
-
-    
-
-
 
     const [ShowNewInvoice, setShowNewInvoice] = useState(false);
 
     function closeNew() {
         setShowNewInvoice(false)
     }
-    
-    // const navigate = useNavigate();
-    // function newPage() {
-    //     navigate(`/new`)
-    //     // setShowNewInvoice(true)
-    // }
 
-    const [show,setShow] = useState(false)
-    const [arrow,setArrow] = useState(true)
+    const [Show,setShow] = useState(false)
+    const [Arrow,setArrow] = useState(true)
 
     function showModal() {
         setShow(true);
         setArrow(false)
-        if (show) {
+        if (Show) {
             setArrow(true)
             setShow(false)
             }
@@ -47,10 +34,12 @@ export default function Header(props) {
             </div>
 
             <div className="headline-right">
+
                 <div className="filter-dropdown">
                     
                     <button onClick={showModal} className="no-color-btn">Filter by status 
-                        {arrow ?
+                        {
+                        Arrow ?
                         <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/> 
                         : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                         }
@@ -59,7 +48,7 @@ export default function Header(props) {
                     {/* <Filter /> */}
 
                     {
-                            show?
+                            Show?
                         
                         <div className="filter">
                         
@@ -82,11 +71,12 @@ export default function Header(props) {
                     }
 
                 </div>
+
                 <button className="violet-btn"
                     onClick={()=>setShowNewInvoice(true)}>
                     <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice
                 </button>
-                {/* <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button> */}
+
             </div>
 
             {

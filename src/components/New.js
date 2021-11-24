@@ -18,6 +18,8 @@ export default function New(props) {
         }
     }
 
+    // const name = document.getElementsByClassName
+
 
     return (
         <div className="new light-version">
@@ -104,15 +106,15 @@ export default function New(props) {
                         <div className="date">
                             <p>Invoice Date</p>
                             <div className="light-border">
-                                <p className="bold-text"></p>
-                                <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/>
+                            <input className="bold-text" type="date"/>
+                                {/* <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/> */}
                             </div>
                         </div>
 
                         <div className="date">
                         <p>Payment Terms</p>
-                        <div onClick={openTerms} className="light-border">
-                            <input className="bold-text" type="text"/>
+                        <div onClick={openTerms} className="light-border pay-terms">
+                        <p className="bold-text">Net  Days</p>
                             {arrow ?
                             <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                             : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>

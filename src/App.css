@@ -24,7 +24,7 @@
   --modalcolor: rgba(0, 0, 0, 0.5);
   --hardblacknumber:#0C0E16;
   --paidcolor:#f2f2f2;
-  --invoicetextdata:#DFE3FA;
+  --invoicetextdata:#888EB0;
   --plusheader: #ffffff;
   --inputcolor: #FFFFFF;
   --newmodal:#FFFFFF;
@@ -44,7 +44,6 @@
   --nocolorbtn:#231F20;
   --headlinetext:#FFFFFF;
   --invoicetextdata:#DFE3FA;
-  /* --colorbody:#141625; */
   --colorbody: #1E2139;
   --plusheader: #ffffff;
   --invoicetext: #ffffff;
