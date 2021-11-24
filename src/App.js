@@ -27,11 +27,22 @@ import {
 function App() {
 
   const [showNewInvoice, setShowNewInvoice] = useState(false);
+  const [colorTheme, setColorTheme] = useState(false)
+
+  function changeTheme() {
+    if(colorTheme === false){
+    setColorTheme(true);
+    }
+    else {
+      setColorTheme(false)
+    }
+    
+}
 
   return ( 
     <Router>
-    <div className="App">
-      <Aside />
+    <div className={colorTheme ? "dark-version" : "App"}>
+      <Aside changeTheme={changeTheme}/>
         <Routes>
           <Route exact path="/" element={<Main />}/> 
           <Route exact path="/client" element={<Client />}/>

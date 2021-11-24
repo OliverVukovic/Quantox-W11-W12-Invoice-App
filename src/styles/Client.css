@@ -1,25 +1,10 @@
-.light-version {
-  --colorbody: #f2f2f2;
-  --headlinetext: #0c0e16;
-  --paragraphtext: #858BB2;
-  --nocolorbtn: #f2f2f2;
-  --violetcolorbtn: #7c5dfa;
-  --whitetext: #ffffff;
-  --boxshadow: #48549F1A;
-  --invoicetext: #7e88c3;
-  --statusgreen: #33D69F;
-  --statusorange: #ff8f00;
-  --redcolorbtn: #EC5757;
-  --paymentbackground: #F9FAFE;
-  --darkpart: #373B53;
-}
-
 .main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: var(--colorbody);
   /* display: none; */
+
 }
 
 .column {
@@ -57,6 +42,7 @@
     margin-bottom: 30px;
     font-weight: 700;
     cursor: pointer;
+    color: #888EB0;
   }
   
   .btn-up-bar {
@@ -99,7 +85,7 @@
   }
   
   .no-color-btn-4 {
-    background-color: var(--colorbody);
+    background-color: var(--nocolorbtn);
     height: 48px;
     border-radius: 20px;
     border: none;
@@ -116,9 +102,9 @@
     padding: 16px 23px;
   }
   .no-color-btn-4:hover {
-    background-color: #DFE3FA;
+    background-color: #d1d6f3;
   }
-  
+
   .delete-btn {
     background-color: var(--redcolorbtn);
     color: var(--whitetext);
@@ -217,6 +203,11 @@
   }
   
   .color-white {
-    color: var(--whitetext);
+    color: var(--whitetextclient);
   }
-  
+  h4 {
+    color: var(--colorclienth4);
+  }
+  .bold-text{
+    color: var(--boldtext);
+  }

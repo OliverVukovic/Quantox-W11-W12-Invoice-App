@@ -1,17 +1,4 @@
-.light-version {
-    --colorbody: #f2f2f2;
-    --headlinetext: #0c0e16;
-    --paragraphtext: #858BB2;
-    --nocolorbtn: #f2f2f2;
-    --violetcolorbtn: #7c5dfa;
-    --whitetext: #ffffff;
-    --boxshadow: #48549F1A;
-    --invoicetext: #7e88c3;
-    --statusgreen: #33D69F;
-  }
-
-
-  header {
+header {
     width: 780px;
     display: flex;
     justify-content: space-between;
@@ -49,7 +36,7 @@
   }
   
   .no-color-btn {
-    background-color: var(--colorbody);
+    background-color: var(--nocolorbtn);
     width: 150px;
     height: 48px;
     border-radius: 20px;
@@ -89,10 +76,10 @@
   }
   
   .btn-plus {
-    border: 1px solid var(--whitetext);
+    border: 1px solid var(--plusheader);
     padding: 10px;
     border-radius: 50%;
-    background-color: var(--whitetext);
+    background-color: var(--plusheader);
   }
 
   /* .filter-dropdown {
@@ -109,8 +96,8 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+    background-color: var(--fillter);
+    box-shadow: var(--shadowvar);
     border-radius: 8px;
     align-items: flex-start;
     padding: 24px;
@@ -122,7 +109,10 @@
   .up {
     transform: rotate(180deg);
   }
-
+  .container {
+    color: var(--filtercolor);
+  }
+  
 
 
   /* .container {
@@ -176,7 +166,7 @@
     left: 0;
     height: 16px;
     width: 16px;
-    background-color: #eee;
+    background-color: var(--inputcheck);
   }
   .checkmark:hover {
     border: 1px solid var(--violetcolorbtn);

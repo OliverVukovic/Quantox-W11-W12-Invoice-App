@@ -1,19 +1,13 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Spartan:wght@500;700&display=swap');
-
-
 .App {
   display: flex;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   font-family: 'Spartan', sans-serif;
-  background-color: var(--colorbody);
 }
-
-.light-version {
+:root {
   --colorbody: #f2f2f2;
   --headlinetext: #0c0e16;
   --paragraphtext: #858BB2;
@@ -28,85 +22,43 @@
   --paymentbackground: #F9FAFE;
   --darkpart: #373B53;
   --modalcolor: rgba(0, 0, 0, 0.5);
-
+  --hardblacknumber:#0C0E16;
+  --paidcolor:#f2f2f2;
+  --invoicetextdata:#DFE3FA;
+  --plusheader: #ffffff;
+  --inputcolor: #FFFFFF;
+  --newmodal:#FFFFFF;
+  --butdowncolor:#ffffff;
+  --fillter:#ffffff;
+  --shadowvar:0px 10px 20px rgba(72, 84, 159, 0.25);
+  --filtercolor:#1E2139;
+  --inputcheck:#DFE3FA;
+  --colorclienth4:#0C0E16;
+  --boldtext:#0c0e16;
+  --whitetextclient:#ffffff;
 }
-
 .dark-version {
-  --colorbody: #000000;
+  --whitetext:#1E2139;
+  --hardblacknumber:#FFFFFF;
+  --paidcolor:#979797;
+  --nocolorbtn:#231F20;
+  --headlinetext:#FFFFFF;
+  --invoicetextdata:#DFE3FA;
+  /* --colorbody:#141625; */
+  --colorbody: #1E2139;
+  --plusheader: #ffffff;
+  --invoicetext: #ffffff;
+  --paragraphtext:#DFE3FA;
+  --newmodal:#1E2139;
+  --inputcolor: ##1e2239;
+  --butdowncolor:#1e2139;
+  --fillter:#1E2139;
+  --shadowvar:0px 10px 20px rgba(0, 0, 0, 0.25);
+  --filtercolor:#ffffff;
+  --inputcheck:#232749;
+  --paymentbackground: #252945;
+  --colorclienth4:#DFE3FA;
+  --boldtext:#FFFFFF;
+  --darkpart: #0C0E16;
+
 }
-
-
-/* -- Aside -- */
-
-
-/* -- Main -- */
-
-
-/* -- New Invoice -- */
-
-
-/* -- Edit invoice -- */
-
-
-/* -- Client page -- */
-
-
-/* -- Delete modal -- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---  Default CSS
-
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
