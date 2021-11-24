@@ -117,7 +117,7 @@ export default function Edit(props) {
                             }
 
                         </div>
-                        { 
+                            { 
                                 terms ?
                                 
                             <div className="filter-2">
@@ -222,12 +222,16 @@ export default function Edit(props) {
             <div className="buttons-down-2">
                 
                 <div className="buttons-right">
-                <button className="no-color-btn-3">Cancel</button>
+                    <button 
+                        onClick={props.closeEdit}
+                        className="no-color-btn-3">Cancel
+                    </button>
+
+
                     <button className="violet-btn-2">Save Changes</button>
                 </div>    
             </div>
 
-            
         </div>
 
     </div>

@@ -190,11 +190,16 @@ export default function New(props) {
                 </div>
 
                 <div className="buttons-down">
-                    <button className="no-color-btn-3">Discard</button>
+
+                    <button className="no-color-btn-3"
+                        onClick={props.closeNew}
+                    >Discard</button>
+
                     <div className="buttons-right">
                         <button className="draft-btn">Save as Draft</button>
                         <button className="violet-btn-2">Save & Send</button>
-                    </div>    
+                    </div>
+
                 </div>
                 
             </div>

@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from 'react';
 import Data from "../data.json";
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import convertDate from "./DayMonthYear";
+import Edit from "./Edit";
+import Delete from "./Delete";
 
 
     const DataList = () => {
@@ -13,18 +16,28 @@ import convertDate from "./DayMonthYear";
         const invoice = location.state;
 
         // const findInvoice = Data.invoices.filter(invoice => invoice.id === invoiceSend.id)
-        
+        const [EditInvoice, setEditInvoice] = useState(false);
+        const [DeleteInvoice, setDeleteInvoice] = useState(false);
+
         const navigate = useNavigate();
         function goBack(invoice) {
             navigate(`/`)
         }
-        function deletePage(invoice) {
-            navigate(`/delete`)
+        // function deletePage(invoice) {
+        //     navigate(`/delete`)
+        // }
+        // function editPage(invoice) {
+        //     navigate(`/edit`, {state: invoice})
+        // }
+
+        function closeEdit() {
+            setEditInvoice(false)
         }
-        function editPage(invoice) {
-            navigate(`/edit`, {state: invoice})
-            
+
+        function closeDelete() {
+            setDeleteInvoice(false)
         }
+
     return (
 
         <div className="main light-version">
@@ -34,9 +47,7 @@ import convertDate from "./DayMonthYear";
             <div key={invoice.id} className="invoice-page"> 
             <div className="client-header">
                 <div className="back-btn">
-                    <button className="go-back" onClick={()=>{
-                        goBack(invoice)
-                        }}>
+                    <button className="go-back" onClick={()=>{goBack(invoice)}}>
                         <img className="arrow-left" src={require('../assets/icon-arrow-left.svg').default} alt="arrow-left"/>Go back
                     </button>
                 </div>
@@ -50,12 +61,27 @@ import convertDate from "./DayMonthYear";
 
                     </div>
                     <div className="up-bar-right">
-                        <button className="no-color-btn-4" onClick={()=>{
-                        editPage(invoice)
-                        }}>Edit</button>
-                        <button className="delete-btn" onClick={()=>{
-                        deletePage(invoice)
-                        }}>Delete</button>
+                        
+                        <button className="no-color-btn-4" 
+                        // onClick={()=>{editPage(invoice)}}
+                        onClick={()=>setEditInvoice(true)}
+                        >Edit</button>
+
+                        <button className="delete-btn" 
+                        // onClick={()=>{deletePage(invoice)}}
+                        onClick={()=>setDeleteInvoice(true)}
+                        >Delete</button>
+
+                        {
+                            EditInvoice?
+                            <Edit closeEdit={closeEdit}/>:null
+                        }
+
+                        {
+                            DeleteInvoice?
+                            <Delete closeDelete={closeDelete}/>:null
+                        }
+
                         <button className="violet-btn-3">Mark as Paid</button>
                     </div>
                 </div>

@@ -9,13 +9,15 @@ export default function Header(props) {
 
     const [ShowNewInvoice, setShowNewInvoice] = useState(false);
 
-
-    const navigate = useNavigate();
-        
-    function newPage() {
-        navigate(`/new`)
-        // setShowNewInvoice(true)
+    function closeNew() {
+        setShowNewInvoice(false)
     }
+    
+    // const navigate = useNavigate();
+    // function newPage() {
+    //     navigate(`/new`)
+    //     // setShowNewInvoice(true)
+    // }
 
     const [show,setShow] = useState(false)
     const [arrow,setArrow] = useState(true)
@@ -26,9 +28,9 @@ export default function Header(props) {
         if (show) {
             setArrow(true)
             setShow(false)
+            }
         }
-    }
-    
+
     return (
     
         <header>
@@ -45,12 +47,12 @@ export default function Header(props) {
                     
                     <button onClick={showModal} className="no-color-btn">Filter by status 
                         {arrow ?
-                        <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/> : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
+                        <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/> 
+                        : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                         }
                     </button>
 
                     {/* <Filter /> */}
-                    
 
                     {
                             show?
@@ -76,7 +78,8 @@ export default function Header(props) {
                     }
 
                 </div>
-                <button onClick={()=>setShowNewInvoice(true)} className="violet-btn">
+                <button className="violet-btn"
+                    onClick={()=>setShowNewInvoice(true)}>
                     <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice
                 </button>
                 {/* <button onClick={() => setShowNewInvoice(true)} className="violet-btn"><img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice</button> */}
@@ -84,7 +87,7 @@ export default function Header(props) {
 
             {
                ShowNewInvoice?
-                <New />:null
+                <New closeNew={closeNew}/>:null
             }
             
         </header>
