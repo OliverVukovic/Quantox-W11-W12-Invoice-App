@@ -184,7 +184,7 @@
     background-color: var(--paymentbackground);
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    padding: 32px;
+    padding-left: 32px;
   }
   
   .item-list-names {
@@ -210,4 +210,19 @@
   }
   .bold-text{
     color: var(--boldtext);
+  }
+
+
+  .item-list-headlines {
+    display: flex;
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  .flex-part {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--paymentbackground);
   }

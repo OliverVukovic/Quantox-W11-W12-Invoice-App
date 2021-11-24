@@ -77,79 +77,104 @@ import Delete from "./Delete";
             <div className="client-section">
                 <div className="invoice-data">
                     <div className="inv-data-left">
-                        <h4><span>#</span>{invoice.id}</h4>
-                        <p>{invoice.description}</p>
+                        <h4 className="invoice-id"><span>#</span>{invoice.id}</h4>
+                        <p className="invoice-description">{invoice.description}</p>
                     </div>
 
                     <div className="inv-data-right">
-                        <p>{invoice.street}</p>
-                        <p>{invoice.city}</p>
-                        <p>{invoice.postCode}</p>
-                        <p>{invoice.country}</p>
+                        <p className="invoice-street">{invoice.street}</p>
+                        <p className="invoice-city">{invoice.city}</p>
+                        <p className="invoice-post">{invoice.postCode}</p>
+                        <p className="invoice-country">{invoice.country}</p>
                     </div>
                 </div>
                 <div className="sending-data">
                     <div className="date-payment-due">
                         <div>
                             <p>Invoice Data</p>
-                            <h4>{convertDate(invoice.createdAt)}</h4>
+                            <h4 className="invoice-created">{convertDate(invoice.createdAt)}</h4>
                         </div>
                         <div>
                             <p>Payment Due</p>
-                            <h4>{convertDate(invoice.paymentDue)}</h4>
+                            <h4 className="invoice-payment">{convertDate(invoice.paymentDue)}</h4>
                         </div>
                     </div>
                     <div className="bill-to">
                         <p>Bill To</p>
-                        <h4>{invoice.clientName}</h4>
-                        <p>{invoice.clientAddress.street}</p>
-                        <p>{invoice.clientAddress.city}</p>
-                        <p>{invoice.clientAddress.postCode}</p>
-                        <p>{invoice.clientAddress.country}</p>
+                        <h4 className="invoice-client-name">{invoice.clientName}</h4>
+                        <p className="invoice-client-street">{invoice.clientAddress.street}</p>
+                        <p className="invoice-client-city">{invoice.clientAddress.city}</p>
+                        <p className="invoice-client-post">{invoice.clientAddress.postCode}</p>
+                        <p className="invoice-client-country">{invoice.clientAddress.country}</p>
                     </div>
                     <div className="sent-to">
                         <p>Sent to</p>
-                        <h4>{invoice.clientEmail}</h4>
+                        <h4 className="invoice-email">{invoice.clientEmail}</h4>
                     </div>
                 </div>
-                
+
+                <div className="flex-part">
+
+                    <div className="item-list-headlines">
+                            
+                        <div className="item-name">
+                            <p>Item Name</p>
+                        </div>
+
+                        <div className="quantity">
+                            <p>QTY.</p>
+                        </div>
+
+                        <div className="price">
+                            <p>Price</p>
+                        </div>
+
+                        <div className="total">
+                            <p>Total</p>
+                        </div>
+                    </div>
+
                 {invoice.items.map((item, index) => (
                     <div key={index} className="payment-data"> 
                         <div className="item-list-names">
                             <div className="item-name">
-                                <p>Item Name</p>
+                                {/* <p>Item Name</p> */}
                                 <div className="no-border">
-                                <p className="bold-text">{item.name}</p>
+                                <p className="bold-text item-name">{item.name}</p>
                                 </div>
                             </div>
 
                             <div className="quantity">
-                                <p>QTY.</p>
+                                {/* <p>QTY.</p> */}
                                 <div className="no-border">
-                                    <p className="bold">{item.quantity}</p>
+                                    <p className="bold item-quantity">{item.quantity}</p>
                                 </div>
                             </div>
 
                             <div className="price">
-                                <p>Price</p>
+                                {/* <p>Price</p> */}
                                 <div className="no-border">
-                                    <p className="bold">£ {item.price.toFixed(2)}</p>
+                                    <p className="bold item-price">£ {item.price.toFixed(2)}</p>
                                 </div>
                             </div>
 
                             <div className="total">
-                                <p>Total</p>
+                                {/* <p>Total</p> */}
                                 <div className="no-border">
-                                    <p className="bold-text">£ {item.total.toFixed(2)}</p>
+                                    <p className="bold-text item-total">£ {item.total.toFixed(2)}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    ))}
+                ))}
+
+                </div>
+
+
 
                 <div className="dark-part">
                     <p>Amount Due</p>
-                    <h2 className="color-white">£ {invoice.total.toFixed(2)}</h2>
+                    <h2 className="color-white invoice-total">£ {invoice.total.toFixed(2)}</h2>
                 </div>
                 
             </div>
