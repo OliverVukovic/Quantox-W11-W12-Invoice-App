@@ -31,28 +31,29 @@ export default function New(props) {
                     <p className="violet-text">Bill From</p>
                     <p>Street Address</p>
                     <div className="light-border">
-                        <p className="bold-text"><input type="text"/></p>
+                        <input className="bold-text" type="text"/>
                     </div>
+                    
                     <div className="adress">
 
                         <div className="city">
                             <p>City</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                            <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="postcode">
                             <p>Post Code</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                            <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="country">
                             <p>Country</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                            <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
@@ -61,17 +62,17 @@ export default function New(props) {
                     <p className="violet-text">Bill To</p>
                     <p>Client's Name</p>
                     <div className="light-border">
-                        <p className="bold-text"><input type="text"/></p>
+                        <input className="bold-text" type="text"/>
                     </div>
 
                     <p>Client's Email</p>
                     <div className="light-border">
-                        <p className="bold-text"><input type="text"/></p>
+                        <input className="bold-text" type="text"/>
                     </div>
 
                     <p>Street Adress</p>
                     <div className="light-border">
-                        <p className="bold-text"><input type="text"/></p>
+                        <input className="bold-text" type="text"/>
                     </div>
 
                     <div className="adress">
@@ -79,21 +80,21 @@ export default function New(props) {
                         <div className="city">
                             <p>City</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="postcode">
                             <p>Post Code</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="country">
                             <p>Country</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
                         
@@ -103,7 +104,7 @@ export default function New(props) {
                         <div className="date">
                             <p>Invoice Date</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <p className="bold-text"></p>
                                 <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/>
                             </div>
                         </div>
@@ -111,7 +112,7 @@ export default function New(props) {
                         <div className="date">
                         <p>Payment Terms</p>
                         <div onClick={openTerms} className="light-border">
-                            <p className="bold-text"></p>
+                            <input className="bold-text" type="text"/>
                             {arrow ?
                             <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
                             : <img className="arrow down up" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/>
@@ -146,7 +147,7 @@ export default function New(props) {
 
                     <p>Project Description</p>
                     <div className="light-border">
-                        <p className="bold-text"><input type="text"/></p>
+                        <input className="bold-text" type="text"/>
                     </div>
 
                     <h3 className="gray">Item List</h3>
@@ -156,28 +157,28 @@ export default function New(props) {
                         <div className="item-name">
                             <p>Item Name</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="quantity">
                             <p>Qty.</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="price">
                             <p>Price</p>
                             <div className="light-border">
-                                <p className="bold-text"><input type="text"/></p>
+                                <input className="bold-text" type="text"/>
                             </div>
                         </div>
 
                         <div className="total">
                             <p>Total</p>
                             <div className="no-border">
-                                <p className="bold"><input type="text"/></p>
+                                <input className="bold" type="text"/>
                             </div>
                         </div>
 

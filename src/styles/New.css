@@ -243,3 +243,6 @@
     font-weight: 700;
     color: var(--headlinetext);
   }
+  input::placeholder {
+    color: var(--headlinetext);
+  }

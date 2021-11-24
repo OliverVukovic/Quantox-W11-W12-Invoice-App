@@ -30,28 +30,32 @@ export default function Edit(props) {
                 <p className="violet-text">Bill From</p>
                 <p>Street Address</p>
                 <div className="light-border">
-                    <p className="bold-text">{invoice.senderAddress.street}</p>
+                    <input className="bold-text" type="text" placeholder={invoice.senderAddress.street}/>
+                    {/* <p className="bold-text">{invoice.senderAddress.street}</p> */}
                 </div>
                 <div className="adress">
 
                     <div className="city">
                         <p>City</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.senderAddress.city}</p>
+                            {/* <p className="bold-text">{invoice.senderAddress.city}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.senderAddress.city}/>
                         </div>
                     </div>
 
                     <div className="postcode">
                         <p>Post Code</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.senderAddress.postCode}</p>
+                            {/* <p className="bold-text">{invoice.senderAddress.postCode}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.senderAddress.postCode}/>
                         </div>
                     </div>
 
                     <div className="country">
                         <p>Country</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.senderAddress.country}</p>
+                            {/* <p className="bold-text">{invoice.senderAddress.country}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.senderAddress.country}/>
                         </div>
                     </div>
 
@@ -60,17 +64,20 @@ export default function Edit(props) {
                 <p className="violet-text">Bill To</p>
                 <p>Client's Name</p>
                 <div className="light-border">
-                    <p className="bold-text">{invoice.clientName}</p>
+                    {/* <p className="bold-text">{invoice.clientName}</p> */}
+                    <input className="bold-text" type="text" placeholder={invoice.clientName}/>
                 </div>
 
                 <p>Client's Email</p>
                 <div className="light-border">
-                    <p className="bold-text">{invoice.clientEmail}</p>
+                    {/* <p className="bold-text">{invoice.clientEmail}</p> */}
+                    <input className="bold-text" type="text" placeholder={invoice.clientEmail}/>
                 </div>
 
                 <p>Street Adress</p>
                 <div className="light-border">
-                    <p className="bold-text">{invoice.clientAddress.street}</p>
+                    {/* <p className="bold-text">{invoice.clientAddress.street}</p> */}
+                    <input className="bold-text" type="text" placeholder={invoice.clientAddress.street}/>
                 </div>
 
                 <div className="adress">
@@ -78,21 +85,24 @@ export default function Edit(props) {
                     <div className="city">
                         <p>City</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.clientAddress.city}</p>
+                            {/* <p className="bold-text">{invoice.clientAddress.city}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.clientAddress.city}/>
                         </div>
                     </div>
 
                     <div className="postcode">
                         <p>Post Code</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.clientAddress.postCode}</p>
+                            {/* <p className="bold-text">{invoice.clientAddress.postCode}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.clientAddress.postCode}/>
                         </div>
                     </div>
 
                     <div className="country">
                         <p>Country</p>
                         <div className="light-border">
-                            <p className="bold-text">{invoice.clientAddress.country}</p>
+                            {/* <p className="bold-text">{invoice.clientAddress.country}</p> */}
+                            <input className="bold-text" type="text" placeholder={invoice.clientAddress.country}/>
                         </div>
                     </div>
                     
@@ -145,7 +155,8 @@ export default function Edit(props) {
 
                 <p>Project Description</p>
                 <div className="light-border">
-                    <p className="bold-text">{invoice.description}</p>
+                    <input className="bold-text" type="text" placeholder={invoice.description}/>
+                    {/* <p className="bold-text">{invoice.description}</p> */}
                 </div>
 
                 <h3 className="gray">Item List</h3>
@@ -184,28 +195,32 @@ export default function Edit(props) {
                             <div className="item-name">
  
                                 <div className="light-border">
-                                    <p className="bold-text">{item.name}</p>
+                                    {/* <p className="bold-text">{item.name}</p> */}
+                                    <input className="bold-text" type="text" placeholder={item.name}/>
                                 </div>
                             </div>
 
                             <div className="quantity">
 
                                 <div className="light-border">
-                                    <p className="bold-text">{item.quantity}</p>
+                                    {/* <p className="bold-text">{item.quantity}</p> */}
+                                    <input className="bold-text" type="text" placeholder={item.quantity}/>
                                 </div>
                             </div>
 
                             <div className="price">
 
                                 <div className="light-border">
-                                    <p className="bold-text">{item.price.toFixed(2)}</p>
+                                    {/* <p className="bold-text">{item.price.toFixed(2)}</p> */}
+                                    <input className="bold-text" type="text" placeholder={item.price.toFixed(2)}/>
                                 </div>
                             </div>
 
                             <div className="total">
 
                                 <div className="no-border">
-                                    <p className="bold">{(item.quantity * item.price).toFixed(2)}</p>
+                                    {/* <p className="bold">{(item.quantity * item.price).toFixed(2)}</p> */}
+                                    <input className="bold-text" type="text" placeholder={(item.quantity * item.price).toFixed(2)}/>
                                 </div>
                             </div>
 
@@ -226,7 +241,6 @@ export default function Edit(props) {
                         onClick={props.closeEdit}
                         className="no-color-btn-3">Cancel
                     </button>
-
 
                     <button className="violet-btn-2">Save Changes</button>
                 </div>    
