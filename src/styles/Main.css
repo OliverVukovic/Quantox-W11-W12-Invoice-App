@@ -3,11 +3,9 @@ main {
     justify-content: center;
     align-items: center;
     align-content: center;
-    /* text-align: center; */
     margin: auto;
     margin-top: inherit;
     padding-top: 70px;
-    /* display: none; */
     background-color:var(--colorbody);
     min-height: 100vh;
 
@@ -50,43 +48,6 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-  }
-  
-  .no-color-btn {
-    background-color: var(--colorbody);
-    width: 150px;
-    height: 48px;
-    border-radius: 20px;
-    border: none;
-    color: var(--headlinetext);
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.25px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .violet-btn {
-    background-color: var(--violetcolorbtn);
-    width: 150px;
-    height: 48px;
-    border-radius: 20px;
-    border: none;
-    color: var(--whitetext);
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: -0.25px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 15px;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
   }
   
   .btn-plus {

@@ -36,7 +36,7 @@ header {
   }
   
   .no-color-btn {
-    background-color: var(--nocolorbtn);
+    background-color: var(--colorbody);
     width: 150px;
     height: 48px;
     border-radius: 20px;
@@ -59,7 +59,7 @@ header {
     height: 48px;
     border-radius: 20px;
     border: none;
-    color: var(--whitetext);
+    color: #ffffff;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: -0.25px;
