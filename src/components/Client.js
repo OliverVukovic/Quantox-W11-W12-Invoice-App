@@ -82,10 +82,10 @@ import Delete from "./Delete";
                     </div>
 
                     <div className="inv-data-right">
-                        <p className="invoice-street">{invoice.street}</p>
-                        <p className="invoice-city">{invoice.city}</p>
-                        <p className="invoice-post">{invoice.postCode}</p>
-                        <p className="invoice-country">{invoice.country}</p>
+                        <p className="invoice-street">{invoice.senderAddress.street}</p>
+                        <p className="invoice-city">{invoice.senderAddress.city}</p>
+                        <p className="invoice-post">{invoice.senderAddress.postCode}</p>
+                        <p className="invoice-country">{invoice.senderAddress.country}</p>
                     </div>
                 </div>
                 <div className="sending-data">

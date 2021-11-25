@@ -50,12 +50,11 @@
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-    background: #FFFFFF;
+    background: var(--containercolor);
     box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
     border-radius: 8px;
     align-items: flex-start;
     position: absolute;
-    /* display: none;  */
   }
 
   .container-1 {
@@ -63,8 +62,9 @@
     padding-left: 5px;
     cursor: pointer;
     font-size: 12px;
-    border-bottom: 1px solid #DFE3FA;
+    border-bottom: 1px solid var(--containerborder);
     padding-left: 20px;
+    background-color: var(--containercolor);
   }
   .container-1 p:hover {
     color: var(--violetcolorbtn);

@@ -36,6 +36,8 @@
   --colorclienth4:#0C0E16;
   --boldtext:#0c0e16;
   --whitetextclient:#ffffff;
+  --containercolor: #ffffff;
+  --containerborder: #DFE3FA;
 }
 .dark-version {
   --whitetext:#1E2139;
@@ -59,5 +61,6 @@
   --colorclienth4:#DFE3FA;
   --boldtext:#FFFFFF;
   --darkpart: #0C0E16;
-
+  --containercolor: #252945;
+  --containerborder: #1E2139;
 }
