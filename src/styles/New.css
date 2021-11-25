@@ -21,6 +21,7 @@
   .bill-form {
     display: flex;
     flex-direction: column;
+    
   }
 
   .violet-text {
@@ -37,6 +38,7 @@
     align-items: center;
     margin-bottom: 14px;
     cursor: pointer;
+    background-color:var(--newmodalinput);
   }
   .light-border:hover {
     border: 1px solid #7C5DFA;
@@ -132,7 +134,7 @@
   }
   
   .no-color-btn-2 {
-    background-color: #f2f2f2;
+    background-color: var(--newcolorbutton);
     width: 100%;
     height: 48px;
     border-radius: 20px;

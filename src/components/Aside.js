@@ -12,9 +12,9 @@ export default function Aside(props) {
         <div className="down-part">
 
             <div className="dark-light-mode">
-                <img onClick={props.changeTheme} className="moon" src={require('../assets/icon-moon.svg').default} alt="moon"/>
                 
-                <img className="sun" src={require('../assets/icon-sun.svg').default} alt="sun"/>
+                <img onClick={props.changeTheme} className="moon" src={props.imgg} alt="moon"/>:
+                
             </div>
 
             <div className="avatar-photo">

@@ -112,6 +112,10 @@ import Delete from "./Delete";
                         <h4 className="invoice-email">{invoice.clientEmail}</h4>
                     </div>
                 </div>
+                <div className="sent-to-mobile">
+                        <p>Sent to</p>
+                        <h4 className="invoice-email">{invoice.clientEmail}</h4>
+                    </div>
 
                 <div className="flex-part">
 
@@ -150,7 +154,7 @@ import Delete from "./Delete";
                                     <p className="bold item-quantity">{item.quantity}</p>
                                 </div>
                             </div>
-
+                            <div className="invisible-x">x</div>
                             <div className="price">
                                 {/* <p>Price</p> */}
                                 <div className="no-border">

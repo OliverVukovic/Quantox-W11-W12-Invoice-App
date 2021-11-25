@@ -1,9 +1,8 @@
 .main {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-color: var(--colorbody);
-  padding-bottom: 30px;
+  padding-bottom: 130px;
 }
 
 .column {
@@ -17,16 +16,29 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding-top: 65px;
+    padding-top: 125px;
     gap: 24px;
-  }
-  
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    width: 100%;
+}
   /* -- header -- */
   
   .client-header {
-    width: 730px;
+    width: 500px;
     display: flex;
     flex-direction: column;
+    width: 700px
+  }
+  .client-section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--whitetext);
+    border-radius: 8px;
+    padding: 48px;
+    max-width: 600px;
+    width: 100%;
   }
   
   .go-back {
@@ -49,7 +61,6 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 10px 10px -10px var(--boxshadow);
-    /* rgba(72, 84, 159, 0.100397 */
   }
   
   .up-bar-left {
@@ -141,13 +152,6 @@
   
   /* -- section -- */
   
-  .client-section {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--whitetext);
-    border-radius: 8px;
-    padding: 48px;
-  }
   
   .invoice-data {
     display: flex;
@@ -208,6 +212,7 @@
   }
   h4 {
     color: var(--colorclienth4);
+    padding: 0;
   }
   .bold-text{
     color: var(--boldtext);
@@ -220,10 +225,121 @@
     padding-top: 32px;
     padding-bottom: 20px;
     justify-content: space-between;
+    
   }
 
   .flex-part {
     display: flex;
     flex-direction: column;
     background-color: var(--paymentbackground);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .invoice-email{
+    margin: 0;
+  }
+  .sent-to-mobile {
+    display: none;
+  }
+  .invisible-x{
+    display: none;
+  }
+
+  @media only screen and (max-width: 760px) {
+    .client-header{
+      width: 400px;
+
+    }
+    .client-section {
+      width: 300px;
+    }
+    .up-bar-right{
+      justify-content: space-around;
+      background-color: var(--whitetext);
+      width: 100%;
+      padding: 21px;
+      bottom: -289px;
+      position: absolute;
+    }
+    .btn-up-bar{
+      justify-content: center;
+    }
+    .invoice-data{
+      display: flex;
+      flex-direction: column;
+    }
+    .inv-data-right {
+      text-align: start;
+    }
+    .sent-to {
+      display: none;
+    }
+    .sending-data {
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+    .sent-to-mobile {
+      display: block;
+      margin-bottom: 20px;
+
+    }
+    .item-list-headlines{
+      display: none;
+    }
+    .item-name {
+      width: 100%;
+    }
+    .quantity{
+      width: 2%;
+    }
+    .price {
+      width: 35%;
+    }
+    .item-list-names {
+      justify-content: space-between;
+    }
+    .total {
+      width: 40%;
+      align-self: flex-end;
+      
+    }
+    .no-border {
+      margin: 0;
+      display: flex;
+    }
+    .item-name {
+      margin: 0;
+    }
+    .invisible-x {
+      display: block;
+      color: var(--paragraphtext);
+      margin-bottom: 4px;
+    }
+    .payment-data {
+      padding-top: 15px;
+    }
+  }
+  @media only screen and (max-width: 420px){
+    .client-header{
+      width: 310px;
+
+    }
+    .client-section {
+      width: 210px;
+    }
+    .dark-part > h2 {
+      font-size: 15px;
+    }
+    .dark-part{
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+      gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .payment-data {
+      padding-left: 7px;
+      
+    }
   }
