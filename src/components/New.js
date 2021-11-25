@@ -18,7 +18,61 @@ export default function New(props) {
         }
     }
 
-    // const name = document.getElementsByClassName
+    // --------------- 
+// const names = document.getElementsByClassName('input-new-item-name') 
+// const prices = document.getElementsByClassName('input-new-item-price') 
+// const quantities = document.getElementsByClassName('input-new-item-qty') 
+// const totals = document.getElementsByClassName('total-new-item') 
+// const newItems = [] 
+// for(let i = 0; i < names.length; i++)  
+//     newItems.push({ 
+//         name: names[i].value, 
+//         price: parseFloat(prices[i].value), 
+//         quantity: parseFloat(quantities[i].value), 
+//         total: parseFloat(totals[i].value) 
+//     }) 
+// let total = 0 
+// newItems.forEach((element) => { 
+//     total += element.quantity * element.price 
+// }) 
+
+// const newElement = { 
+//     clientAddress: { 
+//         city: document.getElementById("bill-to-city-input").value, 
+//         country: document.getElementById("bill-to-country-input").value, 
+//         postCode: document.getElementById("bill-to-post-code-input").value, 
+//         street: document.getElementById("bill-to-street-address-input").value 
+//     }, 
+//     clientEmail: document.getElementById("clients-email-input").value, 
+//     clientName: document.getElementById("clients-name-input").value, 
+//     createdAt: document.getElementById("invoice-date-input").innerText, 
+//     description: document.getElementById("project-description-input").value, 
+//     id: newId, 
+//     items: newItems, 
+//     paymentDue: addDays(new Date(document.getElementById("invoice-date-input").innerText), parseInt(document.getElementById("payment-terms-input").value)), 
+//     paymentTerms: document.getElementById("payment-terms-input").value, 
+//     senderAddress: { 
+//         city: document.getElementById("bill-from-city-input").value, 
+//         country: document.getElementById("bill-from-country-input").value, 
+//         postCode: document.getElementById("bill-from-post-code-input").value, 
+//         street: document.getElementById("bill-from-street-address-input").value 
+//     }, 
+//     status: "draft", 
+//     total: total 
+// } 
+
+// const currentInvoices = window.localStorage.getItem("invoices") 
+// let newInvoices = undefined 
+// if (currentInvoices === "" || currentInvoices === "[]")  
+//    newInvoices = [newElement] 
+// else { 
+//     newInvoices = JSON.parse(currentInvoices) 
+//     newInvoices.push(newElement) 
+//  } 
+
+// window.localStorage.setItem("invoices", JSON.stringify(newInvoices)) 
+// props.updateInvoices(newInvoices) 
+// } ----- 
 
 
     return (

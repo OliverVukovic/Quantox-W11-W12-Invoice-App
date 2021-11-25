@@ -9,7 +9,6 @@ main {
     background-color:var(--colorbody);
     /* min-height: 100vh;
     height: 100%; */
-   
   }
   
   header {
@@ -125,7 +124,6 @@ main {
     font-weight: 700;
     letter-spacing: 0.25px;
     background-color: var(--paidcolor);
-    color: var(--statusgreen);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,10 +135,8 @@ main {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--statusgreen);
   }
   .letter {
-    color: var(--statusgreen);
     font-size: 12px;
     line-height: 15px;
     font-weight: 700;
@@ -174,4 +170,29 @@ main {
     .invoices {
       width: 100%;
     }
+  }
+
+  .paid {
+    color: var(--statusgreen);
+  }
+
+  .pending {
+    color: #ff8f00;
+  }
+
+  .draft {
+    color: #373b53;
+  }
+
+
+  .circle.paid {
+    background-color: var(--statusgreen);
+  }
+
+  .circle.pending{
+    background-color:#ff8f00 ;
+  }
+
+  .circle.draft {
+    background-color: #373b53;
   }
