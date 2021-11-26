@@ -159,6 +159,9 @@ main {
   .bold {
     font-weight: 700;
   }
+  .item:hover{
+    border: 1px solid var(--violetcolorbtn) ;
+  }
   @media only screen and (max-width: 940px) {
     section{
       padding-left: 0;
@@ -202,3 +205,40 @@ main {
   /* .letter.draft {
     color: ;
   } */
+  
+  @media only screen and (max-width: 600px){
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      width: 75%;
+      position: relative;
+      z-index: 1s;
+    }
+    .invoice-number {
+      order: 1;
+      padding-bottom:20px ;
+    }
+    .invoice-date {
+      order: 3;
+      padding-bottom:10px ;
+    }
+    .invoice-name{
+      order: 2;
+      position: absolute;
+      right: 10px;
+    }
+    .arrow {
+      display: none;
+    }
+    .invoice-status{
+      order: 4;
+      position: absolute;
+      right: 10px;
+      top: 50px;
+    }
+    .invoice-price{
+      order: 5;
+    }
+  }

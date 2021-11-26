@@ -37,7 +37,7 @@ export default function Header(props) {
 
                 <div className="filter-dropdown">
                     
-                    <button onClick={showModal} className="no-color-btn">Filter by status 
+                    <button onClick={showModal} className="no-color-btn">Filter <span className="inv-filter">by status </span>
                         {
                         Arrow ?
                         <img className="arrow down" src={require('../assets/icon-arrow-down.svg').default} alt="arrow-down"/> 
@@ -74,7 +74,7 @@ export default function Header(props) {
 
                 <button className="violet-btn"
                     onClick={()=>setShowNewInvoice(true)}>
-                    <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New Invoice
+                    <img className="btn-plus" src={require('../assets/icon-plus.svg').default} alt="plus"/> New <span className="inv-new">Invoice</span>
                 </button>
 
             </div>

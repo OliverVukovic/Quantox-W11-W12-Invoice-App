@@ -104,6 +104,7 @@ header {
     gap: 16px;
     position: absolute;
     /* display: none;  */
+    z-index: 2;
   }
 
   .up {
@@ -206,6 +207,13 @@ header {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .inv-new{
+    color: #ffffff
+  }
+  .inv-filter {
+
+    color: var(--headlinetext);
+  }
 
   @media only screen and (max-width: 940px) {
     header{
@@ -215,6 +223,48 @@ header {
       max-width: 780px;
       width: 80%;
     }
+    .no-color-btn {
+      
+      justify-content: center;
+      gap: 2px;
+    }
   }
   
+  @media only screen and (max-width: 540px){
+    .violet-btn{
+      width: 100px;
+    }
+    .inv-filter {
+      display: none;
+    }
+    .no-color-btn {
+      width: 20px;
+    }
+    .invoices {
+      font-size: 26px;
+    }
+    header {
+      justify-content: space-between;
+      margin-left: 35px;
+    }
+    .headline-right{
+      justify-content: end;
+      grid-gap: 30px;
+    }
+    .headline-left > p {
+      margin: 0;
+    }
+    .inv-new{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    header {
+      width: 80%;
+    }
+    .headline-right{
+      grid-gap: 10px;
+    }
+  }
+
  
