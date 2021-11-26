@@ -55,13 +55,13 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
         console.log("Dobro je... radi!") 
         saveInvoice({
             id : invoice.id,
-            // createdAt : 
+            createdAt : invoice.createdAt,
             // paymentDue :
             description : projectDescription,
             // paymentTerms :
             clientName : clientName,
             clientEmail : clientEmail,
-            // status :
+            status : invoice.status,
 
             // senderAddress.street : senderAddress,
             // senderAddress.city : senderCity,
@@ -73,7 +73,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
             // clientAddress.postCode : clientPostCode,
             // clientAddress.country : clientCountry,
 
-            // total : invoice.total,
+            total : invoice.total,
 
             // item.name : itemName,
             // item.quantity : itemQuantity,

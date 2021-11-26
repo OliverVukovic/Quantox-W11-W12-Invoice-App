@@ -29,7 +29,7 @@ export default function Header(props) {
             <div className="headline">
                 <div className="headline-left">
                     <h1 className="invoices">Invoices</h1>
-                    <p>No invoices</p>
+                    <p>There are <spam className="number-of-invoices">7</spam> invoices</p>
                 </div>
             </div>
 

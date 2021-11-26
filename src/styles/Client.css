@@ -59,6 +59,8 @@
     align-items: center;
     background-color: var(--whitetext);
     padding: 20px;
+    padding-left: 48px;
+    padding-right: 48px;
     border-radius: 8px;
     box-shadow: 0px 10px 10px -10px var(--boxshadow);
   }

@@ -44,9 +44,9 @@ import Delete from "./Delete";
                 <div className="btn-up-bar">    
                     <div className="up-bar-left">
                         <p>Status</p>
-                        <div className="invoice-status-2">
-                            <div className="circle"></div>
-                            <p className="letter">{invoice.status}</p>
+                        <div className={`invoice-status-2 ${invoice.status}`}>
+                            <div className={`circle ${invoice.status}`}></div>
+                            <p className={`letter ${invoice.status}`}>{invoice.status}</p>
                         </div>
 
                     </div>
