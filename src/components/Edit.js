@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"; 
 import { useLocation } from "react-router-dom"; 
 import convertDate from "./DayMonthYear"; 
+import { saveInvoice } from "./DataServis";
 
 
 export default function Edit(props) { 
@@ -41,7 +42,7 @@ const [projectDescription, setProjectDescription] = useState("")
 const [itemName, setItemName] = useState("") 
 const [itemQuantity, setItemQuantity] = useState("") 
 const [itemPrice, setItemPrice] = useState("") 
-// const [itemTotal, setItemTotal] = useState("") 
+const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice) 
 
     useEffect(() => { 
 
@@ -51,7 +52,35 @@ const [itemPrice, setItemPrice] = useState("")
         clientCity, clientPostCode, clientCountry, projectDescription, itemName, itemQuantity, itemPrice]) 
 
     function saveChanges() { 
-        console.log() 
+        console.log("Dobro je... radi!") 
+        saveInvoice({
+            id : invoice.id,
+            // createdAt : 
+            // paymentDue :
+            description : projectDescription,
+            // paymentTerms :
+            clientName : clientName,
+            clientEmail : clientEmail,
+            // status :
+
+            // senderAddress.street : senderAddress,
+            // senderAddress.city : senderCity,
+            // senderAddress.postCode : senderPostCode,
+            // senderAddress.country : senderCountry,
+
+            // clientAddress.street : clientAddress,
+            // clientAddress.city : clientCity,
+            // clientAddress.postCode : clientPostCode,
+            // clientAddress.country : clientCountry,
+
+            // total : invoice.total,
+
+            // item.name : itemName,
+            // item.quantity : itemQuantity,
+            // item.price : itemPrice,
+            // item.total : itemTotal,
+
+        })
     } 
 
     return ( 
@@ -142,7 +171,7 @@ const [itemPrice, setItemPrice] = useState("")
                     <div className="date"> 
                         <p>Invoice Date</p> 
                         <div className="light-border calendar"> 
-                            <input className="bold-text" placeholder={convertDate(invoice.createdAt)}/> 
+                            <input className="bold-text" type="date" placeholder={convertDate(invoice.createdAt)}/> 
                             <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/> 
                         </div> 
                     </div> 

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react"; 
+import { useLocation } from "react-router-dom"; 
+import convertDate from "./DayMonthYear"; 
+import { createInvoice } from "./DataServis";
 
 
 export default function New(props) {
@@ -73,6 +75,68 @@ export default function New(props) {
 // window.localStorage.setItem("invoices", JSON.stringify(newInvoices)) 
 // props.updateInvoices(newInvoices) 
 // } ----- 
+
+
+const [senderAddress, setSenderAddress] = useState("") 
+const [senderCity, setSenderCity] = useState("") 
+const [senderPostCode, setSenderPostCode] = useState("") 
+const [senderCountry, setSenderCountry] = useState("") 
+
+const [clientName, setClientName] = useState("") 
+const [clientEmail, setClientEmail] = useState("") 
+const [clientAddress, setClientAddress] = useState("") 
+const [clientCity, setClientCity] = useState("") 
+const [clientPostCode, setClientPostCode] = useState("") 
+const [clientCountry, setclientCountry] = useState("") 
+
+// const [invoiceDate, setInvoiceDate] = useState("") 
+// const [paymentTerms, setPaymentTerms] = useState("") 
+
+const [projectDescription, setProjectDescription] = useState("") 
+
+const [itemName, setItemName] = useState("") 
+const [itemQuantity, setItemQuantity] = useState("") 
+const [itemPrice, setItemPrice] = useState("") 
+const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice) 
+
+    useEffect(() => { 
+
+    console.log(senderAddress, senderCity, senderPostCode, senderCountry, clientName, clientEmail, clientAddress,  
+        clientCity, clientPostCode, clientCountry, projectDescription, itemName, itemQuantity, itemPrice); 
+    }, [senderAddress, senderCity, senderPostCode, senderCountry, clientName, clientEmail, clientAddress,  
+        clientCity, clientPostCode, clientCountry, projectDescription, itemName, itemQuantity, itemPrice]) 
+
+    function createNewInvoice() { 
+        console.log("Dobro je... radi!") 
+        createInvoice({
+            // id : newId,
+            // createdAt : 
+            // paymentDue :
+            description : projectDescription,
+            // paymentTerms :
+            clientName : clientName,
+            clientEmail : clientEmail,
+            // status :
+
+            // senderAddress.street : senderAddress,
+            // senderAddress.city : senderCity,
+            // senderAddress.postCode : senderPostCode,
+            // senderAddress.country : senderCountry,
+
+            // clientAddress.street : clientAddress,
+            // clientAddress.city : clientCity,
+            // clientAddress.postCode : clientPostCode,
+            // clientAddress.country : clientCountry,
+
+            // total : itemTotal,
+
+            // items.name : item.name,
+            // items.quantity : item.quantity,
+            // items.price : item.price,
+            // items.total : item.total,
+
+        })
+    } 
 
 
     return (
@@ -254,7 +318,11 @@ export default function New(props) {
 
                     <div className="buttons-right">
                         <button className="draft-btn">Save as Draft</button>
-                        <button className="violet-btn-2">Save & Send</button>
+                        
+                        <button className="violet-btn-2" onClick={(e)=>{
+                                e.preventDefault() 
+                                createNewInvoice(invoice)
+                        }}>Save & Send</button>
                     </div>
 
                 </div>

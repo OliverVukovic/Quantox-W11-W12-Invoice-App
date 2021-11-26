@@ -1,7 +1,7 @@
 import React from "react";
-import Data from "../data.json";
+import { getInvoices } from "./DataServis";
 import { useNavigate } from 'react-router-dom';
-import convertDate from "./DayMonthYear";
+import ConvertDate from "./DayMonthYear";
 
 
 const DataList = () => {
@@ -13,14 +13,15 @@ const navigate = useNavigate();
 
         return (
             <div className="invoices">
-                {Data.invoices.map((invoice) => (
+                {getInvoices().map((invoice) => (
                     <div key={invoice.id} className="item" onClick={()=>{
                         openInvoice(invoice)
                         }}> 
                         <div className="invoice-number"><span>#</span>{invoice.id}</div>
-                        <div className="invoice-date">{convertDate(invoice.createdAt)}</div>
+                        <div className="invoice-date">{ConvertDate(invoice.createdAt)}</div>
                         <div className="invoice-name">{invoice.clientName}</div>
-                        <div className="invoice-price"><span className="pound">£ </span>{invoice.total.toFixed(2)}</div>
+                        {/* <div className="invoice-price"><span className="pound">£ </span>{invoice.total.toFixed(2)}</div> */}
+                        <div className="invoice-price"><span className="pound">£ </span>{invoice.total}</div>
                         <div className={`invoice-status ${invoice.status}`}>
                             <div className={`circle ${invoice.status}`}></div>
                             <p className={`letter ${invoice.status}`}>{invoice.status}</p>

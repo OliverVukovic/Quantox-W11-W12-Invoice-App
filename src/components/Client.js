@@ -158,14 +158,14 @@ import Delete from "./Delete";
                             <div className="price">
                                 {/* <p>Price</p> */}
                                 <div className="no-border">
-                                    <p className="bold item-price">£ {item.price.toFixed(2)}</p>
+                                    <p className="bold item-price">£ {item.price}</p>
                                 </div>
                             </div>
 
                             <div className="total">
                                 {/* <p>Total</p> */}
                                 <div className="no-border">
-                                    <p className="bold-text item-total">£ {item.total.toFixed(2)}</p>
+                                    <p className="bold-text item-total">£ {item.total}</p>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +178,7 @@ import Delete from "./Delete";
 
                 <div className="dark-part">
                     <p>Amount Due</p>
-                    <h2 className="color-white invoice-total">£ {invoice.total.toFixed(2)}</h2>
+                    <h2 className="color-white invoice-total">£ {invoice.total}</h2>
                 </div>
                 
             </div>

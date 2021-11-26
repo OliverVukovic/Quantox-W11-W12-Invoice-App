@@ -7,8 +7,8 @@ main {
     margin-top: inherit;
     padding-top: 70px;
     background-color:var(--colorbody);
-    /* min-height: 100vh;
-    height: 100%; */
+    min-height: 150vh;
+    height: 100%;
   }
   
   header {
@@ -174,14 +174,17 @@ main {
 
   .paid {
     color: var(--statusgreen);
+    background-color: var(--statusbckgreen);
   }
 
   .pending {
-    color: #ff8f00;
+    color: var(--statusorange);
+    background-color: var(--statusbckorange);
   }
 
   .draft {
-    color: #373b53;
+    color:  var(--statusgrey);
+    background-color: var(--statusbckgrey);
   }
 
 
@@ -190,9 +193,12 @@ main {
   }
 
   .circle.pending{
-    background-color:#ff8f00 ;
+    background-color:var(--statusorange) ;
   }
 
   .circle.draft {
-    background-color: #373b53;
+    background-color: var(--statusgrey);
   }
+  /* .letter.draft {
+    color: ;
+  } */

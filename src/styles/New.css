@@ -39,6 +39,7 @@
     margin-bottom: 14px;
     cursor: pointer;
     background-color:var(--newmodalinput);
+    border-radius: 6px;
   }
   .light-border:hover {
     border: 1px solid #7C5DFA;

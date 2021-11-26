@@ -1,4 +1,4 @@
-function convertDate(stringDate){
+function ConvertDate(stringDate){
 
     let date = new Date(stringDate)
     return `${date.getDay()} 
@@ -10,5 +10,5 @@ function convertDate(stringDate){
 //     convertDate: convertDate
 // }
 
-export default convertDate
+export default ConvertDate
 
