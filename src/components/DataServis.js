@@ -13,7 +13,7 @@ export const getInvoices = () => {
 }
 
 export const saveInvoice = (invoice) => {
-    const existingInvoice = invoices.find(e => e.id == invoice.id)
+    const existingInvoice = invoices.find(e => e.id === invoice.id)
     const index = invoices.indexOf(existingInvoice)
     invoices[index] = invoice
     console.log("saveInvoice:" + JSON.stringify(invoices))

@@ -62,26 +62,35 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
             clientName : clientName,
             clientEmail : clientEmail,
             status : invoice.status,
-
-            // senderAddress.street : senderAddress,
-            // senderAddress.city : senderCity,
-            // senderAddress.postCode : senderPostCode,
-            // senderAddress.country : senderCountry,
-
-            // clientAddress.street : clientAddress,
-            // clientAddress.city : clientCity,
-            // clientAddress.postCode : clientPostCode,
-            // clientAddress.country : clientCountry,
-
+            senderAddress : {
+                street : senderAddress,
+                city : senderCity,
+                postCode : senderPostCode,
+                country : senderCountry,
+            },
+            clientAddress : {
+                street : clientAddress,
+                city : clientCity,
+                postCode : clientPostCode,
+                country : clientCountry,
+            },
             total : invoice.total,
-
-            // item.name : itemName,
-            // item.quantity : itemQuantity,
-            // item.price : itemPrice,
-            // item.total : itemTotal,
-
+            item : {
+                name : itemName,
+                quantity : itemQuantity,
+                price : itemPrice,
+                total : itemTotal,
+            }
         })
     } 
+
+
+    // const [EditClosed, setEditClosed] = useState(false);
+
+    // function closeEditModal() {
+    //     setEditClosed(false)
+    // }
+
 
     return ( 
 
@@ -300,6 +309,11 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                             saveChanges(invoice) 
                         }}>Save Changes
                     </button> 
+
+                        {/* {
+                            EditClosed?
+                            <Edit closeEditModal={closeEditModal}/>:null
+                        } */}
 
                 </div>     
             </div> 

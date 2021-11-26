@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
+import { getInvoices } from "./DataServis";
 import convertDate from "./DayMonthYear";
 import Edit from "./Edit";
 import Delete from "./Delete";
@@ -34,6 +35,7 @@ import Delete from "./Delete";
         <div className="column light-version">
 
                 {/* {Data.invoices.map((invoice) => ( */}
+        {/* {getInvoices().invoice( */}
             <div key={invoice.id} className="invoice-page"> 
             <div className="client-header">
                 <div className="back-btn">
@@ -183,7 +185,8 @@ import Delete from "./Delete";
                 
             </div>
         </div>
-                {/* ))} */}
+        {/* //  )}  */}
+         
         </div>
         </div>
         );
