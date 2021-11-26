@@ -47,7 +47,7 @@ header {
     letter-spacing: -0.25px;
     font-weight: 700;
     display: flex;
-    justify-content: space-around;
+    gap: 6px;
     align-items: center;
     cursor: pointer;
     text-align: center;
@@ -65,7 +65,7 @@ header {
     letter-spacing: -0.25px;
     font-weight: 700;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-right: 15px;
     align-items: center;
     text-align: center;
@@ -81,13 +81,6 @@ header {
     border-radius: 50%;
     background-color: var(--plusheader);
   }
-
-  /* .filter-dropdown {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      position: relative;
-  } */
 
   .filter {
     width: 150px;
@@ -113,31 +106,6 @@ header {
   .container {
     color: var(--filtercolor);
   }
-  
-
-
-  /* .container {
-    cursor: pointer;
-  }
-
-  .checkmark {
-    height: 16px;
-    width: 16px;
-    background-color: white;
-  }
-
-  .checkbox {
-      cursor: pointer;
-  }
-
-  .checkbox:hover {
-      border: #7c5dfa;
-  }
-  
-  .container input:checked ~ .checkmark {
-    background-color: #7c5dfa;
-  } */
-
 
   .container {
     position: relative;
@@ -207,15 +175,16 @@ header {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .inv-new{
+
+  .inv-new {
     color: #ffffff
   }
   .inv-filter {
-
     color: var(--headlinetext);
   }
 
   @media only screen and (max-width: 940px) {
+
     header{
       margin-top: 80px;
       margin-left: auto;

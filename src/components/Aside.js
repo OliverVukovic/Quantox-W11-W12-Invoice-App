@@ -13,7 +13,7 @@ export default function Aside(props) {
 
             <div className="dark-light-mode">
                 
-                <img onClick={props.changeTheme} className="moon" src={props.imgg} alt="moon"/>
+                <img onClick={props.changeTheme} className="moon" src={props.changeIcon} alt="moon"/>
                 
             </div>
 
