@@ -77,6 +77,30 @@ export default function New(props) {
 // } ----- 
 
 
+const randomId = () => {
+    const newLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const newNumber = "0123456789"
+    let resultLetters = ""
+    let resultNumbers = ""
+    let randomId = ""
+
+    for (let i = 0; i < 2; i++) {
+        let randomLetter = Math.floor(Math.random() * newLetter.length);
+        resultLetters = resultLetters + newLetter.charAt(randomLetter);
+    }
+    for (let i = 0; i < 4; i++) {
+        let randomNumber = Math.floor(Math.random() * newNumber.length);
+        resultNumbers = resultNumbers + newNumber.charAt(randomNumber);
+    }
+
+    randomId = resultLetters + resultNumbers
+    return randomId;
+}
+
+
+
+
+let newId = randomId();
 const [senderAddress, setSenderAddress] = useState("") 
 const [senderCity, setSenderCity] = useState("") 
 const [senderPostCode, setSenderPostCode] = useState("") 
@@ -89,7 +113,7 @@ const [clientCity, setClientCity] = useState("")
 const [clientPostCode, setClientPostCode] = useState("") 
 const [clientCountry, setclientCountry] = useState("") 
 
-// const [invoiceDate, setInvoiceDate] = useState("") 
+const [invoiceDate, setInvoiceDate] = useState("") 
 // const [paymentTerms, setPaymentTerms] = useState("") 
 
 const [projectDescription, setProjectDescription] = useState("") 
@@ -109,8 +133,8 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
     function createNewInvoice() { 
         console.log("Dobro je... radi!") 
         createInvoice({
-            // id : newId,
-            // createdAt : 
+            id : newId,
+            createdAt : invoiceDate,
             // paymentDue :
             description : projectDescription,
             // paymentTerms :

@@ -34,7 +34,7 @@ const [clientCity, setClientCity] = useState("")
 const [clientPostCode, setClientPostCode] = useState("") 
 const [clientCountry, setclientCountry] = useState("") 
 
-// const [invoiceDate, setInvoiceDate] = useState("") 
+const [invoiceDate, setInvoiceDate] = useState("") 
 // const [paymentTerms, setPaymentTerms] = useState("") 
 
 const [projectDescription, setProjectDescription] = useState("") 
@@ -55,7 +55,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
         console.log("Dobro je... radi!") 
         saveInvoice({
             id : invoice.id,
-            createdAt : invoice.createdAt,
+            createdAt : invoiceDate,
             // paymentDue :
             description : projectDescription,
             // paymentTerms :
@@ -180,8 +180,9 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                     <div className="date"> 
                         <p>Invoice Date</p> 
                         <div className="light-border calendar"> 
-                            <input className="bold-text" type="date" placeholder={convertDate(invoice.createdAt)}/> 
-                            <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/> 
+                        <input className="bold-text" type="date" defaultValue={(invoice) ? invoice.createdAt : invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)}/> 
+                            {/* <input className="bold-text" type="date" placeholder={convertDate(invoice.createdAt)}/>  */}
+                            {/* <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/>  */}
                         </div> 
                     </div> 
 
