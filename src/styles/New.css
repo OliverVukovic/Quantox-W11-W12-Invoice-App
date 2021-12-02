@@ -211,6 +211,9 @@
     cursor: pointer;
     text-align: center;
   }
+  .draft-btn:hover {
+    background-color: #0C0E16;
+  }
   
   .violet-btn-2 {
     background-color: #7c5dfa;

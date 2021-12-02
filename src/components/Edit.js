@@ -259,7 +259,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
 
                 {invoice.items.map((item, index) => { 
                     return ( 
-                        <div className="item-list-names"> 
+                        <div className="item-list-names" key = {index}> 
                              
                             <div className="item-name"> 
                                 <div className="light-border"> 

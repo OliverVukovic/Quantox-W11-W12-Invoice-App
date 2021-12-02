@@ -23,6 +23,14 @@
     bottom: 0;
   }
 
+  .violet-btn-2:hover {
+    background-color: #9277FF;
+  }
+
+  .no-color-btn-3:hover {
+    background-color: #DFE3FA;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
