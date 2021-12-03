@@ -101,6 +101,8 @@ const randomId = () => {
 
 
 let newId = randomId();
+const [itemStatus, setItemStatus] = useState("pending")
+
 const [senderAddress, setSenderAddress] = useState("") 
 const [senderCity, setSenderCity] = useState("") 
 const [senderPostCode, setSenderPostCode] = useState("") 
@@ -140,24 +142,27 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
             // paymentTerms :
             clientName : clientName,
             clientEmail : clientEmail,
-            // status :
+            status : itemStatus,
 
-            // senderAddress.street : senderAddress,
-            // senderAddress.city : senderCity,
-            // senderAddress.postCode : senderPostCode,
-            // senderAddress.country : senderCountry,
-
-            // clientAddress.street : clientAddress,
-            // clientAddress.city : clientCity,
-            // clientAddress.postCode : clientPostCode,
-            // clientAddress.country : clientCountry,
-
-            // total : itemTotal,
-
-            // items.name : item.name,
-            // items.quantity : item.quantity,
-            // items.price : item.price,
-            // items.total : item.total,
+            senderAddress : {
+                street : senderAddress,
+                city : senderCity,
+                postCode : senderPostCode,
+                country : senderCountry,
+            },
+            clientAddress : {
+                street : clientAddress,
+                city : clientCity,
+                postCode : clientPostCode,
+                country : clientCountry,
+            },
+            // total : invoice.total,
+            item : {
+                name : itemName,
+                quantity : itemQuantity,
+                price : itemPrice,
+                total : itemTotal,
+            }
 
         })
     } 
@@ -175,7 +180,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                     <p className="violet-text">Bill From</p>
                     <p>Street Address</p>
                     <div className="light-border">
-                        <input className="bold-text" type="text"/>
+                        <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.senderAddress.street : senderAddress} onChange={(e) => setSenderAddress(e.target.value)}/> 
                     </div>
                     
                     <div className="adress">
@@ -183,21 +188,20 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                         <div className="city">
                             <p>City</p>
                             <div className="light-border">
-                            <input className="bold-text" type="text"/>
-                            </div>
+                                <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.senderAddress.city : senderCity} onChange={(e) => setSenderCity(e.target.value)}/>                             </div>
                         </div>
 
                         <div className="postcode">
                             <p>Post Code</p>
                             <div className="light-border">
-                            <input className="bold-text" type="text"/>
+                                <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.senderAddress.postCode : senderPostCode} onChange={(e) => setSenderPostCode(e.target.value)}/> 
                             </div>
                         </div>
 
                         <div className="country">
                             <p>Country</p>
                             <div className="light-border">
-                            <input className="bold-text" type="text"/>
+                                <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.senderAddress.country : senderCountry} onChange={(e) => setSenderCountry(e.target.value)}/> 
                             </div>
                         </div>
 
@@ -206,17 +210,17 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                     <p className="violet-text">Bill To</p>
                     <p>Client's Name</p>
                     <div className="light-border">
-                        <input className="bold-text" type="text"/>
+                        <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.clientName : clientName} onChange={(e) => setClientName(e.target.value)}/>
                     </div>
 
                     <p>Client's Email</p>
                     <div className="light-border">
-                        <input className="bold-text" type="text"/>
+                        <input className="bold-text" type="email" defaultValue={(invoice) ? invoice.clientEmail : clientEmail} onChange={(e) => setClientEmail(e.target.value)}/> 
                     </div>
 
                     <p>Street Adress</p>
                     <div className="light-border">
-                        <input className="bold-text" type="text"/>
+                        <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.clientAddress.street : clientAddress} onChange={(e) => setClientAddress(e.target.value)}/> 
                     </div>
 
                     <div className="adress">
@@ -248,7 +252,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                         <div className="date">
                             <p>Invoice Date</p>
                             <div className="light-border">
-                            <input className="bold-text" type="date"/>
+                            <input className="bold-text" type="date" defaultValue={(invoice) ? invoice.createdAt : invoiceDate} onChange={(e) => setInvoiceDate(e.target.value)}/> 
                                 {/* <img className="calendar" src={require('../assets/icon-calendar.svg').default} alt="calendar"/> */}
                             </div>
                         </div>
@@ -291,7 +295,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
 
                     <p>Project Description</p>
                     <div className="light-border">
-                        <input className="bold-text" type="text"/>
+                        <input className="bold-text" type="text" defaultValue={(invoice) ? invoice.description : projectDescription} onChange={(e) => setProjectDescription(e.target.value)}/> 
                     </div>
 
                     <h3 className="gray">Item List</h3>
@@ -301,21 +305,24 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                         <div className="item-name">
                             <p>Item Name</p>
                             <div className="light-border">
-                                <input className="bold-text" type="text"/>
+                                <input className="bold" type="text"/>
+                                {/* <input className="bold-text" type="text" defaultValue={(invoice) ? item.name : itemName} onChange={(e) => setItemName(e.target.value)}/>  */}
                             </div>
                         </div>
 
                         <div className="quantity">
                             <p>Qty.</p>
                             <div className="light-border">
-                                <input className="bold-text" type="text"/>
+                                <input className="bold" type="text"/>
+                                {/* <input className="bold-text" type="number" defaultValue={(invoice) ? item.quantity : itemQuantity} onChange={(e) => setItemQuantity(e.target.value)}/>  */}
                             </div>
                         </div>
 
                         <div className="price">
                             <p>Price</p>
                             <div className="light-border">
-                                <input className="bold-text" type="text"/>
+                                <input className="bold" type="text"/>
+                                {/* <input className="bold-text" type="number" defaultValue={(invoice) ? item.price.toFixed(2) : itemPrice} onChange={(e) => setItemPrice(e.target.value)}/>  */}
                             </div>
                         </div>
 
@@ -323,6 +330,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                             <p>Total</p>
                             <div className="no-border">
                                 <input className="bold" type="text"/>
+                                {/* <input className="bold-text" type="text" defaultValue={(item.quantity * item.price).toFixed(2)}/>  */}
                             </div>
                         </div>
 

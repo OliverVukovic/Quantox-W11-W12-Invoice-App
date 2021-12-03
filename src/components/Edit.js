@@ -44,6 +44,8 @@ const [itemQuantity, setItemQuantity] = useState("")
 const [itemPrice, setItemPrice] = useState("") 
 const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice) 
 
+// const [EditInvoice, setEditInvoice] = useState(false);
+
     useEffect(() => { 
 
     console.log(senderAddress, senderCity, senderPostCode, senderCountry, clientName, clientEmail, clientAddress,  
@@ -308,6 +310,7 @@ const [itemTotal, setItemTotal] = useState(itemQuantity * itemPrice)
                     <button className="violet-btn-2" onClick={(e)=>{ 
                             e.preventDefault() 
                             saveChanges(invoice) 
+                            // setEditInvoice(false)
                         }}>Save Changes
                     </button> 
 
